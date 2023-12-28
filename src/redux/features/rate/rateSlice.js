@@ -9,7 +9,12 @@ const initialState = {
     sendValue: "",
     receiveValue: "",
     unitExt:"",
-    currentExt:""
+    currentExt:"",
+    reservedValue:"", //only number
+    reserved:"", //without $, BDT
+    minimumValue:"", //only number
+    minimum:"",  //without $, BDT
+
 }
 
 const rateSlice = createSlice({
@@ -50,13 +55,25 @@ const rateSlice = createSlice({
             else if(state.unitExt==="BDT" && state.currentExt==="USD"){
                 state.receiveValue = (action.payload / state.unitPrice).toFixed(2);
             }
-        }
+        },
+        SetReservedValue: (state, action) => {
+            state.reserved = action.payload;
+            const text = action.payload;
+            const result = text.split(' ');
+            state.reservedValue = result[0];
+        },
+        SetMinimumValue: (state, action) => {
+            state.minimum = action.payload;
+            const text = action.payload;
+            const result = text.split(' ');
+            state.minimumValue = result[0];
+        },
     }
 })
 
 
 
-export const {SetRate, SetUnit, SetCurrent, SetUnitPrice, SetCurrentPrice, SetSendReceiveValue} = rateSlice.actions;
+export const {SetRate, SetUnit, SetCurrent, SetUnitPrice, SetCurrentPrice, SetSendReceiveValue, SetReservedValue, SetMinimumValue} = rateSlice.actions;
 
 const rateSliceReducer = rateSlice.reducer;
 export default rateSliceReducer;

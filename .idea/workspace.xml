@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e336808-53ad-443c-a063-369c627ffb71" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/account/accountApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/account/accountApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/rate/rateSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/rate/rateSlice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +99,13 @@
       <workItem from="1703740326777" duration="848000" />
       <workItem from="1703741547635" duration="2546000" />
       <workItem from="1703744156947" duration="282000" />
-      <workItem from="1703744582402" duration="3538000" />
+      <workItem from="1703744582402" duration="3787000" />
+      <workItem from="1703750740165" duration="51000" />
+      <workItem from="1703751801654" duration="183000" />
+      <workItem from="1703752287957" duration="413000" />
+      <workItem from="1703755145378" duration="1417000" />
+      <workItem from="1703758003146" duration="116000" />
+      <workItem from="1703758375068" duration="2476000" />
     </task>
     <servers />
   </component>
