@@ -8,10 +8,10 @@ const Navbar = () => {
             <nav className="py-5 bg-white top-0 border border-gray-100">
                 <div className="container px-4 md:px-12 md:flex md:items-center md:justify-between">
                     <div className="flex items-center justify-between">
-                        <a href="" className="flex items-center">
+                        <Link to="/" className="flex items-center">
                             <img src={logo} alt="logo" className="h-10 mr-3"/>
-                            <span className="text-2xl text-gray-900 font-bold">Growlight</span>
-                        </a>
+                            <span className="text-2xl text-gray-900 font-bold">Exchange</span>
+                        </Link>
                         <span className="block mx-2 text-3xl bg-gray-100 p-2 rounded-lg md:hidden">
                             <IoMdMenu size={25}/>
                         </span>
@@ -26,14 +26,14 @@ const Navbar = () => {
                         <Link to="/login" className="my-6 md:my-0">
                             <a className="font-medium duration-500 text-gray-900 hover:text-indigo-600" href="">Login</a>
                         </Link>
-                        <Link to="/register" className="my-6 md:my-0">
-                            <a className="font-medium duration-500 text-gray-900 hover:text-indigo-600" href="">Register</a>
-                        </Link>
-                        <a href="">
+                        {/*<Link to="/register" className="my-6 md:my-0">*/}
+                        {/*    <a className="font-medium duration-500 text-gray-900 hover:text-indigo-600" href="">Register</a>*/}
+                        {/*</Link>*/}
+                        <Link to="/register">
                             <button className="w-full text-white bg-indigo-600 font-medium rounded-lg px-3.5 py-3 text-center hover:bg-indigo-500 hover:drop-shadow-md transition duration-300 ease-in-out">
-                                Get Started
+                                Register
                             </button>
-                        </a>
+                        </Link>
                     </ul>
                 </div>
             </nav>

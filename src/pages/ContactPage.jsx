@@ -1,10 +1,13 @@
 import Navbar from "../components/Navbar.jsx";
+import Contact from "../components/contact/Contact.jsx";
+import Footer from "../components/Footer.jsx";
 
 const ContactPage = () => {
     return (
         <>
             <Navbar/>
-            <h1>This is Contact Page</h1>
+            <Contact/>
+            <Footer/>
         </>
     );
 };

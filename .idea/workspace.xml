@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4e336808-53ad-443c-a063-369c627ffb71" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ForgotPassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ForgotPassword.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ResetPassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResetPassword.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ContactPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ContactPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/account/accountApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/account/accountApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/api/apiSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/api/apiSlice.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2a0ADhmGBU3LXFkFERNLs60A0Fs" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/F.L.G/Desktop/exchange-front&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\F.L.G\Desktop\exchange-front\src\components\contact" />
+      <recent name="C:\Users\F.L.G\Desktop\exchange-front\src\components\validation" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e336808-53ad-443c-a063-369c627ffb71" name="Changes" comment="" />
+      <created>1703445006714</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703445006714</updated>
+      <workItem from="1703445009448" duration="2065000" />
+      <workItem from="1703450573409" duration="561000" />
+      <workItem from="1703451170283" duration="2000" />
+      <workItem from="1703483495746" duration="4672000" />
+      <workItem from="1703506712052" duration="17000" />
+      <workItem from="1703571147780" duration="202000" />
+      <workItem from="1703590859738" duration="1323000" />
+      <workItem from="1703592390326" duration="2979000" />
+      <workItem from="1703597136184" duration="346000" />
+      <workItem from="1703597698870" duration="222000" />
+      <workItem from="1703603510181" duration="1584000" />
+      <workItem from="1703605393787" duration="162000" />
+      <workItem from="1703607584561" duration="217000" />
+      <workItem from="1703608937099" duration="761000" />
+      <workItem from="1703611643191" duration="1092000" />
+      <workItem from="1703612822579" duration="638000" />
+      <workItem from="1703653366157" duration="912000" />
+      <workItem from="1703654576905" duration="945000" />
+      <workItem from="1703657219153" duration="36000" />
+      <workItem from="1703658641136" duration="60000" />
+      <workItem from="1703658986021" duration="1463000" />
+      <workItem from="1703667889293" duration="627000" />
+      <workItem from="1703680324757" duration="1235000" />
+      <workItem from="1703689487206" duration="1176000" />
+      <workItem from="1703691943795" duration="3279000" />
+      <workItem from="1703699118929" duration="681000" />
+      <workItem from="1703700295797" duration="730000" />
+      <workItem from="1703703496268" duration="2252000" />
+      <workItem from="1703738791688" duration="1344000" />
+      <workItem from="1703740326777" duration="848000" />
+      <workItem from="1703741547635" duration="2546000" />
+      <workItem from="1703744156947" duration="282000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -4,6 +4,8 @@ const initialState = {
     loading:false,
     ForgotError: "",
     ResetError: "",
+    LoginError: "",
+    RegisterError: ""
 }
 
 const authSlice = createSlice({
@@ -21,13 +23,19 @@ const authSlice = createSlice({
         },
         SetResetError : (state, action)=>{
             state.ResetError=action.payload;
+        },
+        SetLoginError : (state, action)=>{
+            state.LoginError=action.payload;
+        },
+        SetRegisterError : (state, action)=>{
+            state.RegisterError=action.payload;
         }
     }
 })
 
 
 
-export const {ShowLoading, HideLoading, SetForgotError, SetResetError} = authSlice.actions;
+export const {ShowLoading, HideLoading, SetForgotError, SetResetError, SetLoginError, SetRegisterError} = authSlice.actions;
 
 const authSliceReducer = authSlice.reducer;
 export default authSliceReducer;

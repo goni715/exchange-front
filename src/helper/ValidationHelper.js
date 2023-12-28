@@ -1,4 +1,6 @@
 import {message} from "antd";
+let EmailRegx = /\S+@\S+\.\S+/;
+
 
 class ValidationHelper {
 
@@ -18,7 +20,11 @@ class ValidationHelper {
         message.loading(content);
     }
 
+    IsEmail(value){
+        if(!EmailRegx.test(value) === true){
+            return true;
+        }
+    }
+
 }
-
-
-export const {SuccessToast, ErrorToast, WarningToast, LoadingToast} = new ValidationHelper();
+export const {SuccessToast, ErrorToast, WarningToast, LoadingToast, IsEmail} = new ValidationHelper();

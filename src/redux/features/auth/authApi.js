@@ -1,7 +1,7 @@
 import {apiSlice} from "../api/apiSlice.js";
 import {ErrorToast, SuccessToast} from "../../../helper/ValidationHelper.js";
 import {setToken, setUserDetails} from "../../../helper/SessionHelper.js";
-import {SetForgotError, SetResetError} from "./authSlice.js";
+import {SetForgotError, SetLoginError, SetResetError} from "./authSlice.js";
 
 
 export const authApi = apiSlice.injectEndpoints({
@@ -37,7 +37,7 @@ export const authApi = apiSlice.injectEndpoints({
                 method: "POST",
                 body: data
             }),
-            async onQueryStarted(arg, {queryFulfilled}){
+            async onQueryStarted(arg, {queryFulfilled, dispatch}){
                 try{
                     const res = await queryFulfilled;
                     // console.log(res?.meta?.response?.status);
@@ -52,19 +52,16 @@ export const authApi = apiSlice.injectEndpoints({
                         }
                         setUserDetails(userDetails);
                         SuccessToast("Login Success");
+                        window.location.href="/";
                     }
-
-
-
-
                 }catch(err) {
                     const status = err?.error?.status;
                     if(status === 404){
-                        ErrorToast("Could not Find this Email!");
+                        dispatch(SetLoginError("Could not Find this Email!"));
                     }else if(status === 400){
-                        ErrorToast("Wrong Password!")
+                        dispatch(SetLoginError("Wrong Password!"));
                     }else{
-                        ErrorToast("Something Went Wrong!")
+                        dispatch(SetLoginError("Something Went Wrong!"));
                     }
                 }
             }
@@ -101,10 +98,6 @@ export const authApi = apiSlice.injectEndpoints({
             async onQueryStarted(arg, {queryFulfilled, dispatch}){
                 try{
                     const res = await queryFulfilled;
-                    // console.log(res?.meta?.response?.status);
-                    // if(res?.data?.message === "success"){
-                    //     SuccessToast("Email Send Success");
-                    // }
                 }catch(err) {
                     const status = err?.error?.status;
                     if(status === 400){

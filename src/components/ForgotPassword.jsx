@@ -1,8 +1,10 @@
 import {useEffect, useState} from "react";
 import {useForgotPasswordVerifyEmailMutation,} from "../redux/features/auth/authApi.js";
-import {ErrorToast} from "../helper/ValidationHelper.js";
 import {useDispatch, useSelector} from "react-redux";
 import {SetForgotError} from "../redux/features/auth/authSlice.js";
+import Error from "./validation/Error.jsx";
+import Success from "./validation/Success.jsx";
+import Alert from "./validation/Alert.jsx";
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState("");
@@ -21,7 +23,6 @@ const ForgotPassword = () => {
 
         const handleSubmit = () => {
            if(email ===""){
-               ErrorToast("Email is required!")
                dispatch(SetForgotError("Please enter your email address!"));
            }else{
                forgotPasswordVerifyEmail({
@@ -40,33 +41,28 @@ const ForgotPassword = () => {
                         <h1 className="text-gray-600 title text-2xl mb-5 text-center">Forgot password?</h1>
                         <hr/>
 
-                        {
-                            error==="" ? (
+                        {error==="" ? (
                                 <>
                                     {isSuccess ? (
                                         <>
-                                            <div className="text-center p-3 flex justify-center items-center text-[#3c763d] bg-[#d6e9c6] rounded border border-[#d6e9c6]">
+                                            <Success>
                                                 We have just sent you a verification email. Check your inbox or spam folder.
-                                            </div>
+                                            </Success>
                                         </>
                                     ) : (
                                         <>
-                                            <div className="text-center p-3 flex justify-center items-center text-[#31708f] bg-[#d9edf7] rounded border border-[#bce8f1]">
+                                            <Alert>
                                                 Please enter your email address in form below to send you link for password reset.
-                                            </div>
+                                            </Alert>
                                         </>
                                     )
                                     }
-
                                 </>
                             ) : (
                                <>
-                                   <div className="text-center p-3 flex justify-center items-center text-[#a94442] bg-[#f2dede] rounded border border-[#f2dede]">
-                                       {error}
-                                   </div>
+                                   <Error message={error}/>
                                </>
                             )
-
                         }
 
 

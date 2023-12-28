@@ -2,6 +2,7 @@ import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useRegisterMutation} from "../redux/features/auth/authApi.js";
 import {ErrorToast} from "../helper/ValidationHelper.js";
+import {useSelector} from "react-redux";
 
 const Register = () => {
     const navigate = useNavigate();
@@ -9,9 +10,9 @@ const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [retypePass, setRetypePass] = useState("");
-
-
     const [register, {isLoading, isSuccess}] = useRegisterMutation();
+    const error = useSelector((state)=> state.auth.RegisterError);
+
 
     useEffect(()=>{
         if(isSuccess){

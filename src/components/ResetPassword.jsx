@@ -3,6 +3,8 @@ import {useResetPasswordMutation,} from "../redux/features/auth/authApi.js";
 import {useDispatch, useSelector} from "react-redux";
 import {SetResetError} from "../redux/features/auth/authSlice.js";
 import {useParams} from "react-router-dom";
+import Error from "./validation/Error.jsx";
+import Success from "./validation/Success.jsx";
 
 const ResetPassword = () => {
     const [newPassword, setNewPassword] = useState("");
@@ -48,27 +50,22 @@ const ResetPassword = () => {
                         <h1 className="text-gray-500 title text-2xl mb-5 text-center">Change password</h1>
                         <hr/>
 
-                        {
-                            error==="" ? (
+                        {error==="" ? (
                                 <>
                                     {isSuccess && (
                                         <>
-                                            <div className="text-center p-3 flex justify-center items-center text-[#3c763d] bg-[#d6e9c6] rounded border border-[#d6e9c6]">
+                                            <Success>
                                                 Your password was changed successfully.
-                                            </div>
+                                            </Success>
                                         </>
                                     )
                                     }
-
                                 </>
                             ) : (
                                 <>
-                                    <div className="text-center p-3 flex justify-center items-center text-[#a94442] bg-[#f2dede] rounded border border-[#f2dede]">
-                                        {error}
-                                    </div>
+                                   <Error message={error}/>
                                 </>
                             )
-
                         }
 
 
