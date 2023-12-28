@@ -1,7 +1,7 @@
 import {apiSlice} from "../api/apiSlice.js";
-import {ErrorToast, SuccessToast} from "../../../helper/ValidationHelper.js";
+import { SuccessToast} from "../../../helper/ValidationHelper.js";
 import {setToken, setUserDetails} from "../../../helper/SessionHelper.js";
-import {SetForgotError, SetLoginError, SetResetError} from "./authSlice.js";
+import {SetForgotError, SetLoginError, SetRegisterError, SetResetError} from "./authSlice.js";
 
 
 export const authApi = apiSlice.injectEndpoints({
@@ -23,9 +23,9 @@ export const authApi = apiSlice.injectEndpoints({
                     let status = err?.error?.status;
                     let result = err?.error?.data?.result;
                     if(status === 409){
-                        ErrorToast(result);
+                        dispatch(SetRegisterError(result));
                     }else{
-                        ErrorToast("Something Went Wrong!")
+                        dispatch(SetRegisterError(result));
                     }
                 }
             }

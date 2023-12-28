@@ -1,11 +1,14 @@
 import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useRegisterMutation} from "../redux/features/auth/authApi.js";
-import {ErrorToast} from "../helper/ValidationHelper.js";
-import {useSelector} from "react-redux";
+import {IsEmail} from "../helper/ValidationHelper.js";
+import {useDispatch, useSelector} from "react-redux";
+import Error from "./validation/Error.jsx";
+import {SetRegisterError} from "../redux/features/auth/authSlice.js";
 
 const Register = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -16,21 +19,27 @@ const Register = () => {
 
     useEffect(()=>{
         if(isSuccess){
+            dispatch(SetRegisterError(""))
             navigate('/login');
         }
-    },[navigate,isSuccess]);
+    },[navigate,isSuccess, dispatch]);
 
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if(password !== retypePass){
-            ErrorToast("Password & Re-type Password must be same");
-        }else{
+    const handleSubmit = () => {
+        if(username==="" || email==="" || password==="" || retypePass===""){
+            dispatch(SetRegisterError("All fields are required.!"))
+        }
+        else if(IsEmail(email)){
+            dispatch(SetRegisterError("Please enter a valid email address!"));
+        }
+        else if(password !== retypePass){
+            dispatch(SetRegisterError("Password & Re-type Password must be same. !"))
+        }
+        else{
             register({
                 username, email, password
             })
         }
-
     }
 
 
@@ -41,8 +50,15 @@ const Register = () => {
         <>
             <section id="main" className="bg-[#f7f7f7] py-10">
                 <div className="container md:px-12 flex flex-col items-center">
-                    <form onSubmit={handleSubmit} className="bg-white px-14 py-12 w-2/5">
-                        <h1 className="text-[#0090D4] text-center title font-bold text-3xl">Create account free</h1>
+                    <div className="bg-white px-14 py-12 w-2/5">
+                        <h1 className="text-[#0090D4] text-center mb-5 title font-bold text-3xl">
+                            Create account free
+                        </h1>
+
+                        {error && (
+                            <Error message={error}/>
+                         )
+                        }
                         <div className="form flex flex-col gap-8 py-8">
                             <div>
                                 <input onChange={(e)=>setUsername(e.target.value)} value={username} required className="w-full px-3 py-1.5 rounded outline-none border border-[#e3e3e3] focus:border-[#0955ff] text-black focus:text-[#02743a] placeholder:text-black" type="text" placeholder="Username"/>
@@ -58,7 +74,7 @@ const Register = () => {
                             </div>
                         </div>
                         <div className="flex justify-center items-center">
-                            <button className="bg-[#0090D4] text-white px-5 py-2 rounded">
+                            <button onClick={handleSubmit} className="bg-[#0090D4] text-white px-5 py-2 rounded">
                                 {isLoading ? "Processing..." : "Register"}
                             </button>
                         </div>
@@ -68,7 +84,7 @@ const Register = () => {
                                 Forgot password?
                             </span>
                         </div>
-                    </form>
+                    </div>
                     <div className="w-2/5 mt-5">
                         <button onClick={()=>navigate('/login')} className="bg-[#0072bc] px-12 py-4 title text-white text-lg rounded  w-full">
                             Login with account
