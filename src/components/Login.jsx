@@ -11,17 +11,8 @@ const Login = () => {
     const dispatch = useDispatch();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [login, {isLoading, isSuccess}] = useLoginMutation();
+    const [login, {isLoading}] = useLoginMutation();
     const error = useSelector((state)=> state.auth.LoginError);
-
-
-
-    useEffect(()=>{
-        if(isSuccess){
-            dispatch(SetLoginError(""));
-            navigate('/');
-        }
-    },[navigate,isSuccess, dispatch]);
 
 
     const handleSubmit = () => {
