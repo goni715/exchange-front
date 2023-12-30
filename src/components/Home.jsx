@@ -72,7 +72,7 @@ const Home = () => {
                 <div className="container md:px-12 flex justify-center gap-8">
                         <div className="w-1/5 bg-white">
                             <h3 className="mb-3 px-4">Send From</h3>
-                            <select onChange={(e)=>setSend(e.target.value)} value={send} className="w-full px-4 py-2" name="" id="">
+                            <select onChange={(e)=>setSend(e.target.value)} value={send} className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" name="" id="">
                                 {sendAccounts?.length>0 &&(
                                     <>
                                         {
@@ -96,7 +96,7 @@ const Home = () => {
                         </div>
                         <div className="w-1/5 bg-white">
                             <h3 className="mb-3 px-4">Receive To</h3>
-                            <select onChange={(e)=>setReceive(e.target.value)} value={receive} className="w-full px-4 py-2" name="" id="">
+                            <select onChange={(e)=>setReceive(e.target.value)} value={receive} className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" name="" id="">
                                 {receiveAccounts?.length>0 &&(
                                     <>
                                         {
