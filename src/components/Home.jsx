@@ -6,8 +6,10 @@ import {useGetRateMutation} from "../redux/features/rate/rateApi.js";
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {SetSendReceiveValue} from "../redux/features/rate/rateSlice.js";
-import {ErrorToast, SuccessToast} from "../helper/ValidationHelper.js";
+import {SuccessToast} from "../helper/ValidationHelper.js";
 import Error from "./validation/Error.jsx";
+import InformationModal from "./modal/InformationModal.jsx";
+import {SetAccountId, SetInformationShow} from "../redux/features/account/accountSlice.js";
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -17,15 +19,15 @@ const Home = () => {
     const {data:receiveData} = useGetAllReceiveAccountQuery();
     const {result:receiveAccounts} = receiveData || {};
 
-    const [getRate, {isLoading, isSuccess}] = useGetRateMutation();
+    const [getRate, {isLoading}] = useGetRateMutation();
     const [send, setSend]= useState("658d2e2a61d015e063fd92dd");
     const [receive, setReceive]= useState("658d2f2161d015e063fd92f4");
     const {unit, current, sendValue, receiveValue, reserved, reservedValue,minimum, minimumValue }= useSelector((state)=>state.rate) || {};
 
     const {data:receiveAccountData} = useGetReceiveAccountQuery(receive);
     const {data:sendAccountData} = useGetSendAccountQuery(send);
-
     const [error, setError]= useState("");
+
 
 
 
@@ -52,8 +54,17 @@ const Home = () => {
       else{
           setError("");
           SuccessToast("Exchange success");
+          dispatch(SetInformationShow(true));
       }
     }
+
+
+
+
+
+
+
+
 
 
 
@@ -96,7 +107,13 @@ const Home = () => {
                         </div>
                         <div className="w-1/5 bg-white">
                             <h3 className="mb-3 px-4">Receive To</h3>
-                            <select onChange={(e)=>setReceive(e.target.value)} value={receive} className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" name="" id="">
+                            <select
+                                onChange={(e)=>{
+                                    setReceive(e.target.value);
+                                    dispatch(SetAccountId(e.target.value));
+                                }}
+                                value={receive}
+                                className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
                                 {receiveAccounts?.length>0 &&(
                                     <>
                                         {
@@ -124,6 +141,9 @@ const Home = () => {
                     <button onClick={handleSubmit} className="bg-[#0090D4] text-white rounded-md px-12 py-3">Exchange</button>
                 </div>
             </section>
+
+            <InformationModal/>
+
         </>
     );
 };

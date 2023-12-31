@@ -11,3 +11,18 @@ input:read-only{
 button:disabled{
     cursor: not-allowed;
 }
+
+.css-dev-only-do-not-override-gzal6t.ant-modal .ant-modal-close{
+    display: none !important;
+}
+.css-dev-only-do-not-override-gzal6t.ant-btn-default{
+    display: none !important;
+}
+.css-dev-only-do-not-override-gzal6t.ant-btn-primary {
+    display: none !important;
+}
+
+.ant-modal-title{
+    font-size: 24px !important;
+    font-weight: bold !important;
+}
