@@ -6,20 +6,22 @@ import {useGetRateMutation} from "../redux/features/rate/rateApi.js";
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {SetSendReceiveValue} from "../redux/features/rate/rateSlice.js";
-import {SuccessToast} from "../helper/ValidationHelper.js";
 import Error from "./validation/Error.jsx";
 import InformationModal from "./modal/InformationModal.jsx";
-import {SetAccountId, SetInformationShow} from "../redux/features/account/accountSlice.js";
+import {SetInformationShow, SetReceiveAccountId, SetSendAccountId} from "../redux/features/account/accountSlice.js";
+import {getToken} from "../helper/SessionHelper.js";
+import {useNavigate} from "react-router-dom";
 
 const Home = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const {data:sendData} = useGetAllSendAccountQuery();
     const {result:sendAccounts} = sendData || {};
 
     const {data:receiveData} = useGetAllReceiveAccountQuery();
     const {result:receiveAccounts} = receiveData || {};
 
-    const [getRate, {isLoading}] = useGetRateMutation();
+    const [getRate] = useGetRateMutation();
     const [send, setSend]= useState("658d2e2a61d015e063fd92dd");
     const [receive, setReceive]= useState("658d2f2161d015e063fd92f4");
     const {unit, current, sendValue, receiveValue, reserved, reservedValue,minimum, minimumValue }= useSelector((state)=>state.rate) || {};
@@ -52,9 +54,13 @@ const Home = () => {
           setError(`The amount of exchange exceed our reserve. Please contact the administrator.`)
       }
       else{
-          setError("");
-          SuccessToast("Exchange success");
-          dispatch(SetInformationShow(true));
+          if(getToken()){
+              setError("");
+              dispatch(SetInformationShow(true));
+          }
+          else{
+             navigate('/login')
+          }
       }
     }
 
@@ -83,7 +89,13 @@ const Home = () => {
                 <div className="container md:px-12 flex justify-center gap-8">
                         <div className="w-1/5 bg-white">
                             <h3 className="mb-3 px-4">Send From</h3>
-                            <select onChange={(e)=>setSend(e.target.value)} value={send} className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" name="" id="">
+                            <select
+                                onChange={(e)=>{
+                                    setSend(e.target.value);
+                                    dispatch(SetSendAccountId(e.target.value));
+                                }}
+                                value={send}
+                                className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" name="" id="">
                                 {sendAccounts?.length>0 &&(
                                     <>
                                         {
@@ -110,7 +122,7 @@ const Home = () => {
                             <select
                                 onChange={(e)=>{
                                     setReceive(e.target.value);
-                                    dispatch(SetAccountId(e.target.value));
+                                    dispatch(SetReceiveAccountId(e.target.value));
                                 }}
                                 value={receive}
                                 className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">

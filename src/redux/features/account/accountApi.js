@@ -1,6 +1,7 @@
 import {apiSlice} from "../api/apiSlice.js";
 import {ErrorToast} from "../../../helper/ValidationHelper.js";
 import {SetMinimumValue, SetReservedValue} from "../rate/rateSlice.js";
+import {SetReceiveAccountName, SetSendAccountName} from "./accountSlice.js";
 
 
 export const accountApi = apiSlice.injectEndpoints({
@@ -40,6 +41,7 @@ export const accountApi = apiSlice.injectEndpoints({
                     const data = res?.data?.result;
                     if(data){
                         dispatch(SetReservedValue(data?.reserved));
+                        dispatch(SetReceiveAccountName(data?.name));
                     }
                 }catch(err) {
                     ErrorToast("Something Went Wrong!");
@@ -57,6 +59,7 @@ export const accountApi = apiSlice.injectEndpoints({
                     const data = res?.data?.result;
                     if(data){
                         dispatch(SetMinimumValue(data?.minimum));
+                        dispatch(SetSendAccountName(data?.name));
                     }
                 }catch(err) {
                     ErrorToast("Something Went Wrong!");

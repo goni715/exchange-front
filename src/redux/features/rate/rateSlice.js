@@ -14,7 +14,8 @@ const initialState = {
     reserved:"", //without $, BDT
     minimumValue:"", //only number
     minimum:"",  //without $, BDT
-
+    sendAmount:"",
+    receiveAmount: ""
 }
 
 const rateSlice = createSlice({
@@ -46,14 +47,18 @@ const rateSlice = createSlice({
         },
         SetSendReceiveValue: (state, action) => {
             state.sendValue=action.payload;
+            state.sendAmount=action.payload+" "+state.unitExt;
             if(state.unitExt === state.currentExt){
                 state.receiveValue = (action.payload * state.currentPrice).toFixed(2);
+                state.receiveAmount = (action.payload * state.currentPrice).toFixed(2)+" "+state.currentExt;
             }
             else if(state.unitExt==="USD" && state.currentExt==="BDT"){
                 state.receiveValue = (action.payload * state.currentPrice).toFixed(2);
+                state.receiveAmount = (action.payload * state.currentPrice).toFixed(2)+" "+state.currentExt;
             }
             else if(state.unitExt==="BDT" && state.currentExt==="USD"){
                 state.receiveValue = (action.payload / state.unitPrice).toFixed(2);
+                state.receiveAmount = (action.payload / state.unitPrice).toFixed(2)+" "+state.currentExt;
             }
         },
         SetReservedValue: (state, action) => {

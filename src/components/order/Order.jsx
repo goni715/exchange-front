@@ -6,7 +6,7 @@ import CityBankOrder from "./CityBankOrder.jsx";
 import BkashOrder from "./BkashOrder.jsx";
 
 const Order = () => {
-    const AccountId = useSelector((state)=>state.account.accountId);
+    const AccountId = useSelector((state)=>state.account.receiveAccountId);
 
     if(AccountId === "658d2f2161d015e063fd92f4"){
         return(
