@@ -68,17 +68,10 @@ const Home = () => {
 
 
 
-
-
-
-
-
-
-
     return (
         <>
             <section id="main" className="bg-[#f7f7f7] py-10">
-                <div className="container md:px-12 flex justify-center gap-8">
+                <div className="md:px-12 flex justify-center gap-8">
                     {error !=="" && (
                         <div className="w-3/4 mb-5">
                             <Error message={error}/>
@@ -86,7 +79,7 @@ const Home = () => {
                        )
                     }
                 </div>
-                <div className="container md:px-12 flex justify-center gap-8">
+                <div className="md:px-12 flex justify-center gap-8">
                         <div className="w-1/5 bg-white">
                             <h3 className="mb-3 px-4">Send From</h3>
                             <select

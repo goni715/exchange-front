@@ -9,7 +9,7 @@ const Contact = () => {
     return (
         <>
             <section className="bg-[#f7f7f7] py-10">
-                <div className="container md:px-12 flex justify-center">
+                <div className="md:px-12 flex justify-center">
                     <div className="w-9/12 bg-white px-8 pt-12 pb-8">
                         <h1 className="text-3xl title text-[#6f6f6f] mb-3">Contact</h1>
                         <hr/>

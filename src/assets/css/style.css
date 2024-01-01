@@ -1,28 +1,2 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
-.title{
-    font-family: 'Ubuntu', sans-serif;
-}
-
-input:read-only{
-    cursor: not-allowed;
-}
-
-button:disabled{
-    cursor: not-allowed;
-}
-
-.css-dev-only-do-not-override-gzal6t.ant-modal .ant-modal-close{
-    display: none !important;
-}
-.css-dev-only-do-not-override-gzal6t.ant-btn-default{
-    display: none !important;
-}
-.css-dev-only-do-not-override-gzal6t.ant-btn-primary {
-    display: none !important;
-}
-
-.ant-modal-title{
-    font-size: 24px !important;
-    font-weight: bold !important;
-}

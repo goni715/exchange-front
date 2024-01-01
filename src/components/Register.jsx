@@ -49,7 +49,7 @@ const Register = () => {
     return (
         <>
             <section id="main" className="bg-[#f7f7f7] py-10">
-                <div className="container md:px-12 flex flex-col items-center">
+                <div className="md:px-12 flex flex-col items-center">
                     <div className="bg-white px-14 py-12 w-2/5">
                         <h1 className="text-[#0090D4] text-center mb-5 title font-bold text-3xl">
                             Create account free

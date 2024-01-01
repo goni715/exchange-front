@@ -25,7 +25,7 @@ const Rocket = () => {
     return (
         <>
             <section className="bg-[#f7f7f7] py-10">
-                <div className="container md:px-12 flex justify-center">
+                <div className="md:px-12 flex justify-center">
                     <div className="w-1/2">
                         <h1 className="text-3xl mb-3">Additional Information</h1>
                         {error && (

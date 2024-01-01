@@ -32,9 +32,9 @@ const Login = () => {
 
     return (
         <>
-            <section id="main" className="bg-[#f7f7f7] py-20">
-                <div className="container md:px-12 flex flex-col items-center ">
-                    <div className="bg-white px-14 py-12 w-2/5">
+            <section id="main" className="bg-[#f7f7f7] py-10 md:py-20">
+                <div className="md:px-12 flex flex-col items-center ">
+                    <div className="bg-white px-14 py-12 w-auto md:w-2/5">
                         <h1 className="text-[#0090D4] text-center title mb-5 font-bold text-3xl">Login with your account</h1>
                         {error && (
                                 <Error message={error}/>
@@ -55,9 +55,9 @@ const Login = () => {
                             </button>
                         </div>
 
-                        <div className="flex justify-between mt-10">
+                        <div className="flex max-[400px]:flex-col max-[400px]:gap-4 justify-between mt-10">
                             <div>
-                                <input required className="cursor-pointer" type="checkbox" id="checked"/>
+                                <input className="cursor-pointer" type="checkbox" id="checked"/>
                                 <label className="cursor-pointer text-[#b9b9b9] hover:text-[#0090D4] transition duration-500" htmlFor="checked"> Remember me</label>
                             </div>
                             <span onClick={()=>navigate("/forgot-password")} className="cursor-pointer text-[#b9b9b9] hover:text-[#0090D4] transition duration-500">
@@ -66,7 +66,7 @@ const Login = () => {
                         </div>
                     </div>
                     <div className="w-2/5 mt-5">
-                        <button onClick={()=>navigate('/register')} className="bg-[#0072bc] px-12 py-4 title text-white text-lg rounded  w-full">
+                        <button onClick={()=>navigate('/register')} className="bg-[#0072bc] px-6 md:px-12 py-4 title text-white text-md md:text-lg rounded  w-full">
                             Create new account
                         </button>
                     </div>
