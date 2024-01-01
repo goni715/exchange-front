@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4e336808-53ad-443c-a063-369c627ffb71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyExchanges.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/exchanges/MyExchanges.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/BkashOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/BkashOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/CityBankOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/CityBankOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/DutchBanglaOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/DutchBanglaOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/NagadOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/NagadOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/RocketOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/RocketOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MyExchangesPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MyExchangesPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/features/exchange/exchangeApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/exchange/exchangeApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/account/accountApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/account/accountApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/api/apiSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/api/apiSlice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +129,11 @@
       <workItem from="1704100478040" duration="231000" />
       <workItem from="1704100750417" duration="351000" />
       <workItem from="1704106768944" duration="793000" />
-      <workItem from="1704108127347" duration="1887000" />
+      <workItem from="1704108127347" duration="2041000" />
+      <workItem from="1704124962680" duration="265000" />
+      <workItem from="1704126804934" duration="110000" />
+      <workItem from="1704130593208" duration="117000" />
+      <workItem from="1704134304454" duration="277000" />
     </task>
     <servers />
   </component>

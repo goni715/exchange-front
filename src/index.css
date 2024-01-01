@@ -20,7 +20,7 @@ button:disabled{
     cursor: not-allowed;
 }
 
-.css-dev-only-do-not-override-gzal6t.ant-modal .ant-modal-close{
+ .ant-modal-close{
     display: none !important;
 }
 .css-dev-only-do-not-override-gzal6t.ant-btn-default{

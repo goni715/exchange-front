@@ -16,10 +16,10 @@ const Home = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const {data:sendData} = useGetAllSendAccountQuery();
-    const {result:sendAccounts} = sendData || {};
+    const {data:sendAccounts} = sendData || {};
 
     const {data:receiveData} = useGetAllReceiveAccountQuery();
-    const {result:receiveAccounts} = receiveData || {};
+    const {data:receiveAccounts} = receiveData || {};
 
     const [getRate] = useGetRateMutation();
     const [send, setSend]= useState("658d2e2a61d015e063fd92dd");

@@ -38,7 +38,7 @@ export const accountApi = apiSlice.injectEndpoints({
             async onQueryStarted(arg, {queryFulfilled, dispatch }){
                 try{
                     const res = await queryFulfilled;
-                    const data = res?.data?.result;
+                    const data = res?.data?.data;
                     if(data){
                         dispatch(SetReservedValue(data?.reserved));
                         dispatch(SetReceiveAccountName(data?.name));
@@ -56,7 +56,7 @@ export const accountApi = apiSlice.injectEndpoints({
             async onQueryStarted(arg, {queryFulfilled, dispatch }){
                 try{
                     const res = await queryFulfilled;
-                    const data = res?.data?.result;
+                    const data = res?.data?.data;
                     if(data){
                         dispatch(SetMinimumValue(data?.minimum));
                         dispatch(SetSendAccountName(data?.name));
