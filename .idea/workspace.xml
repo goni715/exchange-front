@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="4e336808-53ad-443c-a063-369c627ffb71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyExchanges.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyExchanges.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyExchanges.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/exchanges/MyExchanges.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/order/BkashOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/BkashOrder.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/order/CityBankOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/CityBankOrder.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/order/DutchBanglaOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/DutchBanglaOrder.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/order/NagadOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/NagadOrder.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/order/RocketOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/RocketOrder.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MyExchangesPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MyExchangesPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/exchange/exchangeApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/exchange/exchangeApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +59,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\F.L.G\Desktop\exchange-front\src\components\exchanges" />
       <recent name="C:\Users\F.L.G\Desktop\exchange-front\src\components\contact" />
       <recent name="C:\Users\F.L.G\Desktop\exchange-front\src\components\validation" />
     </key>
@@ -121,7 +129,11 @@
       <workItem from="1704093064492" duration="920000" />
       <workItem from="1704094310524" duration="68000" />
       <workItem from="1704094664139" duration="2147000" />
-      <workItem from="1704098255804" duration="1051000" />
+      <workItem from="1704098255804" duration="1135000" />
+      <workItem from="1704100478040" duration="231000" />
+      <workItem from="1704100750417" duration="351000" />
+      <workItem from="1704106768944" duration="793000" />
+      <workItem from="1704108127347" duration="1887000" />
     </task>
     <servers />
   </component>

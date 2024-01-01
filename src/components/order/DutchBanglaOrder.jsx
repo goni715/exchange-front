@@ -5,9 +5,11 @@ import {Modal} from "antd";
 import {BiTransfer} from "react-icons/bi";
 import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
 import {useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 
 const DutchBanglaOrder = () => {
     const dispatch = useDispatch();
+    const navigate=useNavigate();
     const modalOpen = useSelector(selectModalOpen);
     const {email, sendAccountId, receiveAccountId, sendAccountName, receiveAccountName, DutchBanglaFormValue} = useSelector((state)=>state.account);
     const {accountName, accountNumber, contactNumber, contactNumber2} = DutchBanglaFormValue;
@@ -30,8 +32,9 @@ const DutchBanglaOrder = () => {
         if(isSuccess){
             dispatch(SetInformationShow(false));
             dispatch(SetModalOpen(false));
+            navigate('/account/exchanges')
         }
-    },[isSuccess, dispatch])
+    },[isSuccess, dispatch, navigate])
 
 
     const handleSubmit = () => {

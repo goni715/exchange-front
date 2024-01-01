@@ -1,7 +1,6 @@
 import {apiSlice} from "../api/apiSlice.js";
 import {ErrorToast, SuccessToast} from "../../../helper/ValidationHelper.js";
 
-
 export const exchangeApi = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         exchangeCreate: builder.mutation({
@@ -17,12 +16,27 @@ export const exchangeApi = apiSlice.injectEndpoints({
                         SuccessToast("Exchange Create Success");
                     }
                 }catch(err) {
+                    console.log(err)
                     ErrorToast("Something went wrong!")
                 }
             }
         }),
+        getUserExchanges: builder.query({
+            query: () => `/exchange/get-user-exchanges`,
+            keepUnusedDataFor:600,
+            async onQueryStarted(arg, {queryFulfilled, dispatch }){
+                try{
+                    const res = await queryFulfilled;
+                    const data = res?.data?.data;
+                }catch(err) {
+                    ErrorToast("Something Went Wrong!");
+                    //do nothing
+                    console.log(err);
+                }
+            },
+        })
     }),
 })
 
 
-export const {useExchangeCreateMutation} = exchangeApi;
+export const {useExchangeCreateMutation, useGetUserExchangesQuery} = exchangeApi;
