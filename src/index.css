@@ -24,6 +24,11 @@ button:disabled{
     display: none !important;
 }
 
+.ant-modal-close{
+    display: none !important;
+}
+
+
 .ant-modal-title{
     font-size: 24px !important;
     font-weight: bold !important;
