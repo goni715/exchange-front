@@ -25,7 +25,9 @@ const RocketOrder = () => {
     const handleCancel = () => {
         dispatch(SetInformationShow(false));
         dispatch(SetModalOpen(false));
+        navigate(0)
     };
+
 
 
     useEffect(()=>{
@@ -93,11 +95,11 @@ const RocketOrder = () => {
                                 dispatch(SetModalOpen(false))
                                dispatch(SetTransactionModalOpen(true))
                             }}
-                            className="w-1/2 px-3 py-2 text-white bg-green-500 text-md font-bold rounded-md"
+                            className="w-1/2 px-3 py-2 text-white bg-green-500 hover:bg-green-700 text-md font-bold rounded-md"
                         >
                             Confirm Order
                         </button>
-                        <button onClick={handleCancel} className="w-1/2 px-3 py-2 text-white text-md font-bold bg-red-500 rounded-md">Cancel Order</button>
+                        <button onClick={handleCancel} className="w-1/2 px-3 py-2 text-white text-md font-bold bg-red-500 hover:bg-red-700 rounded-md">Cancel Order</button>
                     </div>
                 </div>
             </Modal>

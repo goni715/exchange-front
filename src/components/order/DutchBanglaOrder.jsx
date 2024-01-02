@@ -12,7 +12,7 @@ const DutchBanglaOrder = () => {
     const dispatch = useDispatch();
     const navigate=useNavigate();
     const modalOpen = useSelector(selectModalOpen);
-    const {email, sendAccountId, receiveAccountId, sendAccountName, receiveAccountName, DutchBanglaFormValue} = useSelector((state)=>state.account);
+    const {email,sendAccountName, receiveAccountName, DutchBanglaFormValue} = useSelector((state)=>state.account);
     const {accountName, accountNumber, contactNumber, contactNumber2} = DutchBanglaFormValue;
     const {sendAmount,receiveAmount }= useSelector((state)=>state.rate) || {};
     const [exchangeCreate, {isLoading, isSuccess}] = useExchangeCreateMutation();
@@ -25,7 +25,9 @@ const DutchBanglaOrder = () => {
     const handleCancel = () => {
         dispatch(SetInformationShow(false));
         dispatch(SetModalOpen(false));
+        navigate(0)
     };
+
 
 
 
@@ -38,21 +40,21 @@ const DutchBanglaOrder = () => {
     },[isSuccess, dispatch, navigate])
 
 
-    const handleSubmit = () => {
-        exchangeCreate({
-            email,
-            sendAccountId,
-            receiveAccountId,
-            sendAmount,
-            receiveAmount,
-            information: {
-                accountName,
-                accountNumber,
-                contactNumber,
-                contactNumber2
-            }
-        })
-    }
+    // const handleSubmit = () => {
+    //     exchangeCreate({
+    //         email,
+    //         sendAccountId,
+    //         receiveAccountId,
+    //         sendAmount,
+    //         receiveAmount,
+    //         information: {
+    //             accountName,
+    //             accountNumber,
+    //             contactNumber,
+    //             contactNumber2
+    //         }
+    //     })
+    // }
 
 
 
@@ -104,11 +106,11 @@ const DutchBanglaOrder = () => {
                                 dispatch(SetModalOpen(false))
                                 dispatch(SetTransactionModalOpen(true))
                             }}
-                            className="w-1/2 px-3 py-2 text-white bg-green-500 text-md font-bold rounded-md"
+                            className="w-1/2 px-3 py-2 text-white bg-green-500 hover:bg-green-700 text-md font-bold rounded-md"
                         >
                             Confirm Order
                         </button>
-                        <button onClick={handleCancel} className="w-1/2 px-3 py-2 text-white text-md font-bold bg-red-500 rounded-md">Cancel Order</button>
+                        <button onClick={handleCancel} className="w-1/2 px-3 py-2 text-white text-md font-bold bg-red-500 hover:bg-red-700 rounded-md">Cancel Order</button>
                     </div>
                 </div>
             </Modal>

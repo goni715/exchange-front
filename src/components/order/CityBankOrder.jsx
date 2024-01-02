@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {selectModalOpen, SetModalOpen} from "../../redux/features/modal/modalSlice.js";
+import {selectModalOpen, SetModalOpen, SetTransactionModalOpen} from "../../redux/features/modal/modalSlice.js";
 import {SetInformationShow} from "../../redux/features/account/accountSlice.js";
 import {Modal} from "antd";
 import {BiTransfer} from "react-icons/bi";
@@ -13,7 +13,7 @@ const CityBankOrder = () => {
     const dispatch = useDispatch();
     const navigate=useNavigate();
     const modalOpen = useSelector(selectModalOpen);
-    const {email,sendAccountId, receiveAccountId,sendAccountName, receiveAccountName, CityBankFormValue} = useSelector((state)=>state.account);
+    const {email,sendAccountName, receiveAccountName, CityBankFormValue} = useSelector((state)=>state.account);
     const {accountName, accountNumber, contactNumber} = CityBankFormValue;
     const {sendAmount,receiveAmount }= useSelector((state)=>state.rate) || {};
     const [exchangeCreate, {isLoading, isSuccess}] = useExchangeCreateMutation();
@@ -26,7 +26,9 @@ const CityBankOrder = () => {
     const handleCancel = () => {
         dispatch(SetInformationShow(false));
         dispatch(SetModalOpen(false));
+        navigate(0)
     };
+
 
 
     useEffect(()=>{
@@ -38,20 +40,20 @@ const CityBankOrder = () => {
     },[isSuccess, dispatch, navigate])
 
 
-    const handleSubmit = () => {
-        exchangeCreate({
-            email,
-            sendAccountId,
-            receiveAccountId,
-            sendAmount,
-            receiveAmount,
-            information: {
-                accountName,
-                accountNumber,
-                contactNumber
-            }
-        })
-    }
+    // const handleSubmit = () => {
+    //     exchangeCreate({
+    //         email,
+    //         sendAccountId,
+    //         receiveAccountId,
+    //         sendAmount,
+    //         receiveAmount,
+    //         information: {
+    //             accountName,
+    //             accountNumber,
+    //             contactNumber
+    //         }
+    //     })
+    // }
 
 
 
@@ -98,8 +100,16 @@ const CityBankOrder = () => {
                         <p>{email}</p>
                     </div>
                     <div className="flex mt-6 gap-6">
-                        <button disabled={isLoading} onClick={handleSubmit} className="w-1/2 px-3 py-2 text-white bg-green-500 text-md font-bold rounded-md">Confirm Order</button>
-                        <button onClick={handleCancel} className="w-1/2 px-3 py-2 text-white text-md font-bold bg-red-500 rounded-md">Cancel Order</button>
+                        <button
+                            onClick={()=>{
+                                dispatch(SetModalOpen(false))
+                                dispatch(SetTransactionModalOpen(true))
+                            }}
+                            className="w-1/2 px-3 py-2 text-white bg-green-500 hover:bg-green-700 text-md font-bold rounded-md"
+                        >
+                            Confirm Order
+                        </button>
+                        <button onClick={handleCancel} className="w-1/2 px-3 py-2 text-white text-md font-bold bg-red-500 hover:bg-red-700 rounded-md">Cancel Order</button>
                     </div>
                 </div>
             </Modal>
