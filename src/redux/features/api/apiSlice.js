@@ -3,8 +3,8 @@ import {ErrorToast} from "../../../helper/ValidationHelper.js";
 import {getToken} from "../../../helper/SessionHelper.js";
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: "https://exchange-api-five.vercel.app/api",
-    // baseUrl: "http://localhost:5000/api",
+    // baseUrl: "https://exchange-api-five.vercel.app/api",
+    baseUrl: "http://localhost:5000/api",
     prepareHeaders: async (headers, {getState, endpoint}) =>{
         if(getToken()){
             headers.set("token", getToken());

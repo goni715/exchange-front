@@ -9,7 +9,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="py-5 w-full bg-blue-950 text-white border border-gray-100 bg-red-300">
+            <nav className="py-5 w-full bg-blue-950 text-white border border-gray-100">
                 <div className="px-4 md:px-12 md:flex md:items-center md:justify-between">
                     <div className="flex items-center justify-between">
                         <div
@@ -22,7 +22,7 @@ const Navbar = () => {
                             <img src={logo} alt="logo" className="h-10 mr-3"/>
                             <span className="text-2xl text-white font-bold">Exchange</span>
                         </div>
-                        <span className="block cursor-pointer  text-3xl text-black bg-gray-100 p-2 rounded-lg md:hidden">
+                        <span className="block cursor-pointer text-3xl text-black bg-gray-100 p-2 rounded-lg md:hidden">
                             <IoMdMenu size={25}/>
                         </span>
                     </div>
