@@ -4,33 +4,51 @@ import Nagad from "./Nagad.jsx";
 import DutchBangla from "./DutchBangla.jsx";
 import CityBank from "./CityBank.jsx";
 import Bkash from "./Bkash.jsx";
+import PerfectMoney from "./PerfectMoney.jsx";
+import WebMoney from "./WebMoney.jsx";
+import BracBank from "./BracBank.jsx";
 
 const AccountInformation = () => {
-    const AccountId = useSelector((state)=>state.account.receiveAccountId);
+    const receiveAccountId = useSelector((state)=>state.account.receiveAccountId);
 
-    if(AccountId === "658d2f2161d015e063fd92f4"){
+    if(receiveAccountId === "658d2f2161d015e063fd92f4"){
         return(
             <Rocket/>
         )
     }
-    else if(AccountId === "658d2f0f61d015e063fd92f1"){
+    else if(receiveAccountId === "658d2f0f61d015e063fd92f1"){
         return(
             <Nagad/>
         )
     }
-    else if(AccountId === "658d2f3a61d015e063fd92f8"){
+    else if(receiveAccountId === "658d2f3a61d015e063fd92f8"){
         return(
             <DutchBangla/>
         )
     }
-    else if(AccountId === "658d2f5161d015e063fd92fb"){
+    else if(receiveAccountId === "658d2f5161d015e063fd92fb"){
         return(
             <CityBank/>
         )
     }
-    else if(AccountId === "658d2f7561d015e063fd92ff"){
+    else if(receiveAccountId === "658d2f7561d015e063fd92ff"){
         return(
             <Bkash/>
+        )
+    }
+    else if(receiveAccountId === "65930fa44798ee030c6d54f3"){
+        return(
+            <PerfectMoney/>
+        )
+    }
+    else if(receiveAccountId === "65930d3d4798ee030c6d54a5"){
+        return(
+            <WebMoney/>
+        )
+    }
+    else if(receiveAccountId === "6593e3150bf1828210763a67"){
+        return(
+            <BracBank/>
         )
     }
 

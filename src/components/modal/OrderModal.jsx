@@ -1,6 +1,6 @@
 import Order from "../order/Order.jsx";
 
-const InformationModal = () => {
+const OrderModal = () => {
 
     return (
         <>
@@ -9,4 +9,4 @@ const InformationModal = () => {
     );
 };
 
-export default InformationModal;
+export default OrderModal;

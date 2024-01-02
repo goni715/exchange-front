@@ -1,18 +1,18 @@
 import {useDispatch, useSelector} from "react-redux";
-import {SetEmail, SetRocketFormValue} from "../../redux/features/account/accountSlice.js";
-import OrderModal from "../modal/OrderModal.jsx";
-import {useState} from "react";
+import {SetEmail, SetWebMoneyFormValue} from "../../redux/features/account/accountSlice.js";
 import {SetModalOpen} from "../../redux/features/modal/modalSlice.js";
+import OrderModal from "../modal/OrderModal.jsx";
 import Error from "../validation/Error.jsx";
+import {useState} from "react";
 
-const Rocket = () => {
+const WebMoney = () => {
     const dispatch = useDispatch();
-    const {email, RocketFormValue} = useSelector((state)=>state.account);
-    const {rocketNumber, contactNumber} = RocketFormValue;
+    const {email, WebMoneyFormValue} = useSelector((state)=>state.account);
+    const {wmzPurseId, contactNumber} = WebMoneyFormValue;
     const [error, setError]= useState("");
 
     const handleSubmit = () => {
-        if(email ==="" || rocketNumber ==="" || contactNumber ===""){
+        if(email ==="" || wmzPurseId ==="" || contactNumber ===""){
             setError("All fields are required.!");
         }else{
             setError("");
@@ -24,10 +24,11 @@ const Rocket = () => {
 
     return (
         <>
+
             <section className="bg-[#f7f7f7] py-10">
                 <div className="md:px-12 flex justify-center">
                     <div className="w-1/2">
-                        <h1 className="text-3xl mb-3">Additional Information</h1>
+                        <h1 className="text-3xl mb-3 ">Additional Information</h1>
                         {error && (
                             <Error message={error}/>
                         )
@@ -40,15 +41,15 @@ const Rocket = () => {
                         </div>
                         <div className="mb-3">
                             <label className="block pb-2" htmlFor="number">
-                                Rocket Number
+                                WMZ Purse Id
                             </label>
-                            <input onChange={(e)=>dispatch(SetRocketFormValue({property:"rocketNumber", value:e.target.value}))} value={rocketNumber} className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="text" id="number"/>
+                            <input onChange={(e)=>dispatch(SetWebMoneyFormValue({property:"wmzPurseId", value:e.target.value}))} value={wmzPurseId} className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="text" id="number"/>
                         </div>
                         <div className="mb-3">
                             <label className="block pb-2" htmlFor="contact">
                                 Contact Mobile Number.
                             </label>
-                            <input onChange={(e)=>dispatch(SetRocketFormValue({property:"contactNumber", value:e.target.value}))} value={contactNumber} className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="email" id="contact"/>
+                            <input onChange={(e)=>dispatch(SetWebMoneyFormValue({property:"contactNumber", value:e.target.value}))} value={contactNumber} className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="email" id="contact"/>
                         </div>
                     </div>
                 </div>
@@ -62,4 +63,4 @@ const Rocket = () => {
     );
 };
 
-export default Rocket;
+export default WebMoney;

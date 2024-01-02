@@ -1,20 +1,20 @@
 import {useDispatch, useSelector} from "react-redux";
-import {selectModalOpen, SetModalOpen, SetTransactionModalOpen} from "../../redux/features/modal/modalSlice.js";
+import {selectModalOpen, SetModalOpen} from "../../redux/features/modal/modalSlice.js";
 import {SetInformationShow} from "../../redux/features/account/accountSlice.js";
 import {BiTransfer} from "react-icons/bi";
 import {Modal} from "antd";
 import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
 import {useEffect} from "react";
 import {useNavigate} from "react-router-dom";
-import TransactionModal from "../modal/TransactionModal.jsx";
 
-const BkashOrder = () => {
+const WebMoneyOrder = () => {
     const dispatch = useDispatch();
     const navigate=useNavigate();
     const modalOpen = useSelector(selectModalOpen);
-    const {email, sendAccountName, receiveAccountName, BkashFormValue} = useSelector((state)=>state.account);
-    const {personalNumber, contactNumber} = BkashFormValue;
+    const {email, sendAccountName, receiveAccountName, WebMoneyFormValue} = useSelector((state)=>state.account);
+    const {wmzPurseId, contactNumber} = WebMoneyFormValue;
     const {sendAmount,receiveAmount }= useSelector((state)=>state.rate) || {};
+    const [exchangeCreate, {isLoading, isSuccess}] = useExchangeCreateMutation();
 
 
     const handleOk = () => {
@@ -26,28 +26,28 @@ const BkashOrder = () => {
     };
 
 
-    // useEffect(()=>{
-    //     if(isSuccess){
-    //         dispatch(SetInformationShow(false));
-    //         dispatch(SetModalOpen(false));
-    //         navigate('/account/exchanges')
-    //     }
-    // },[isSuccess, dispatch, navigate])
+    useEffect(()=>{
+        if(isSuccess){
+            dispatch(SetInformationShow(false));
+            dispatch(SetModalOpen(false));
+            navigate('/account/exchanges')
+        }
+    },[isSuccess, dispatch, navigate])
 
 
-    // const handleSubmit = () => {
-    //     exchangeCreate({
-    //         email,
-    //         sendAccountId,
-    //         receiveAccountId,
-    //         sendAmount,
-    //         receiveAmount,
-    //         information: {
-    //             personalNumber,
-    //             contactNumber
-    //         }
-    //     })
-    // }
+    const handleSubmit = () => {
+        // exchangeCreate({
+        //     email,
+        //     sendAccountId,
+        //     receiveAccountId,
+        //     sendAmount,
+        //     receiveAmount,
+        //     information: {
+        //         personalNumber,
+        //         contactNumber
+        //     }
+        // })
+    }
 
 
 
@@ -75,8 +75,8 @@ const BkashOrder = () => {
                         <p>{receiveAmount}</p>
                     </div>
                     <div className="flex justify-between border-b border-gray-300 py-2">
-                        <p>Bkash Personal Number</p>
-                        <p>{personalNumber}</p>
+                        <p>WMZ Purse Id</p>
+                        <p>{wmzPurseId}</p>
                     </div>
                     <div className="flex justify-between border-b border-gray-300 py-2">
                         <p>Contact Mobile No.</p>
@@ -87,18 +87,15 @@ const BkashOrder = () => {
                         <p>{email}</p>
                     </div>
                     <div className="flex mt-6 gap-6">
-                        <button onClick={()=>dispatch(SetTransactionModalOpen(true))} className="w-1/2 px-3 py-2 text-white bg-green-500 text-md font-bold rounded-md">
-                            Confirm Order
+                        <button disabled={isLoading} onClick={handleSubmit} className="w-1/2 px-3 py-2 text-white bg-green-500 text-md font-bold rounded-md">
+                            {isLoading ? "Processing..." : "Confirm Order"}
                         </button>
                         <button onClick={handleCancel} className="w-1/2 px-3 py-2 text-white text-md font-bold bg-red-500 rounded-md">Cancel Order</button>
                     </div>
                 </div>
             </Modal>
-
-            <TransactionModal/>
-
         </>
     );
 };
 
-export default BkashOrder;
+export default WebMoneyOrder;

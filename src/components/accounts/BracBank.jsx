@@ -1,25 +1,24 @@
 import {useDispatch, useSelector} from "react-redux";
-import {SetEmail, SetRocketFormValue} from "../../redux/features/account/accountSlice.js";
-import OrderModal from "../modal/OrderModal.jsx";
+import {SetBracBankFormValue,SetEmail} from "../../redux/features/account/accountSlice.js";
 import {useState} from "react";
 import {SetModalOpen} from "../../redux/features/modal/modalSlice.js";
 import Error from "../validation/Error.jsx";
+import OrderModal from "../modal/OrderModal.jsx";
 
-const Rocket = () => {
+const BracBank = () => {
     const dispatch = useDispatch();
-    const {email, RocketFormValue} = useSelector((state)=>state.account);
-    const {rocketNumber, contactNumber} = RocketFormValue;
+    const {email, BracBankFormValue} = useSelector((state)=>state.account);
+    const {accountName, accountNumber, contactNumber} = BracBankFormValue;
     const [error, setError]= useState("");
 
     const handleSubmit = () => {
-        if(email ==="" || rocketNumber ==="" || contactNumber ===""){
+        if(email ==="" || accountName==="" || accountNumber==="" || contactNumber===""){
             setError("All fields are required.!");
         }else{
             setError("");
             dispatch(SetModalOpen(true));
         }
     }
-
 
 
     return (
@@ -40,15 +39,21 @@ const Rocket = () => {
                         </div>
                         <div className="mb-3">
                             <label className="block pb-2" htmlFor="number">
-                                Rocket Number
+                                Brac Bank Account Name.
                             </label>
-                            <input onChange={(e)=>dispatch(SetRocketFormValue({property:"rocketNumber", value:e.target.value}))} value={rocketNumber} className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="text" id="number"/>
+                            <input onChange={(e)=>dispatch(SetBracBankFormValue({property:"accountName", value:e.target.value}))} value={accountName} className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="text" id="number"/>
+                        </div>
+                        <div className="mb-3">
+                            <label className="block pb-2" htmlFor="number">
+                                Brac Bank Account Number.
+                            </label>
+                            <input onChange={(e)=>dispatch(SetBracBankFormValue({property:"accountNumber", value:e.target.value}))} value={accountNumber} className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="text" id="number"/>
                         </div>
                         <div className="mb-3">
                             <label className="block pb-2" htmlFor="contact">
-                                Contact Mobile Number.
+                                Contact Mobile No.
                             </label>
-                            <input onChange={(e)=>dispatch(SetRocketFormValue({property:"contactNumber", value:e.target.value}))} value={contactNumber} className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="email" id="contact"/>
+                            <input onChange={(e)=>dispatch(SetBracBankFormValue({property:"contactNumber", value:e.target.value}))} value={contactNumber} className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="email" id="contact"/>
                         </div>
                     </div>
                 </div>
@@ -62,4 +67,4 @@ const Rocket = () => {
     );
 };
 
-export default Rocket;
+export default BracBank;

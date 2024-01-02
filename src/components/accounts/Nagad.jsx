@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {SetEmail, SetNagadFormValue} from "../../redux/features/account/accountSlice.js";
-import InformationModal from "../modal/InformationModal.jsx";
+import OrderModal from "../modal/OrderModal.jsx";
 import {useState} from "react";
 import {SetModalOpen} from "../../redux/features/modal/modalSlice.js";
 import Error from "../validation/Error.jsx";
@@ -56,7 +56,7 @@ const Nagad = () => {
                 </div>
             </section>
 
-            <InformationModal/>
+            <OrderModal/>
         </>
     );
 };

@@ -7,7 +7,7 @@ import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {SetSendReceiveValue} from "../redux/features/rate/rateSlice.js";
 import Error from "./validation/Error.jsx";
-import InformationModal from "./modal/InformationModal.jsx";
+import OrderModal from "./modal/OrderModal.jsx";
 import {SetInformationShow, SetReceiveAccountId, SetSendAccountId} from "../redux/features/account/accountSlice.js";
 import {getToken} from "../helper/SessionHelper.js";
 import {useNavigate} from "react-router-dom";
@@ -147,7 +147,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <InformationModal/>
+            <OrderModal/>
 
         </>
     );

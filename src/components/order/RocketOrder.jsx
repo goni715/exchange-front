@@ -1,11 +1,12 @@
 import {useDispatch, useSelector} from "react-redux";
-import {selectModalOpen, SetModalOpen} from "../../redux/features/modal/modalSlice.js";
+import {selectModalOpen, SetModalOpen, SetTransactionModalOpen} from "../../redux/features/modal/modalSlice.js";
 import {SetInformationShow} from "../../redux/features/account/accountSlice.js";
 import {Modal} from "antd";
 import {BiTransfer} from "react-icons/bi";
 import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
 import {useEffect} from "react";
 import {useNavigate} from "react-router-dom";
+import TransactionModal from "../modal/TransactionModal.jsx";
 
 const RocketOrder = () => {
     const dispatch = useDispatch();
@@ -36,19 +37,19 @@ const RocketOrder = () => {
     },[isSuccess, dispatch, navigate])
 
 
-    const handleSubmit = () => {
-        exchangeCreate({
-            email,
-            sendAccountId,
-            receiveAccountId,
-            sendAmount,
-            receiveAmount,
-            information: {
-                rocketNumber,
-                contactNumber,
-            }
-        })
-    }
+    // const handleSubmit = () => {
+    //     exchangeCreate({
+    //         email,
+    //         sendAccountId,
+    //         receiveAccountId,
+    //         sendAmount,
+    //         receiveAmount,
+    //         information: {
+    //             rocketNumber,
+    //             contactNumber,
+    //         }
+    //     })
+    // }
 
 
 
@@ -87,11 +88,21 @@ const RocketOrder = () => {
                         <p>{email}</p>
                     </div>
                     <div className="flex mt-6 gap-6">
-                        <button onClick={handleSubmit} disabled={isLoading} className="w-1/2 px-3 py-2 text-white bg-green-500 text-md font-bold rounded-md">Confirm Order</button>
+                        <button
+                            onClick={()=>{
+                                dispatch(SetModalOpen(false))
+                               dispatch(SetTransactionModalOpen(true))
+                            }}
+                            className="w-1/2 px-3 py-2 text-white bg-green-500 text-md font-bold rounded-md"
+                        >
+                            Confirm Order
+                        </button>
                         <button onClick={handleCancel} className="w-1/2 px-3 py-2 text-white text-md font-bold bg-red-500 rounded-md">Cancel Order</button>
                     </div>
                 </div>
             </Modal>
+
+            <TransactionModal/>
         </>
     );
 };

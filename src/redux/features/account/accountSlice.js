@@ -31,6 +31,19 @@ export const accountSlice=createSlice({
             accountNumber: "",
             contactNumber:"",
             contactNumber2:""
+        },
+        PerfectMoneyFormValue: {
+            perfectUID:"",
+            contactNumber:"",
+        },
+        WebMoneyFormValue: {
+            wmzPurseId:"",
+            contactNumber:"",
+        },
+        BracBankFormValue: {
+            accountName:"",
+            accountNumber: "",
+            contactNumber:""
         }
     },
     reducers:{
@@ -72,8 +85,20 @@ export const accountSlice=createSlice({
             const {property, value} = action.payload;
             state.DutchBanglaFormValue[property]=value;
         },
+        SetPerfectMoneyFormValue:(state,action)=>{
+            const {property, value} = action.payload;
+            state.PerfectMoneyFormValue[property]=value;
+        },
+        SetWebMoneyFormValue:(state,action)=>{
+            const {property, value} = action.payload;
+            state.WebMoneyFormValue[property]=value;
+        },
+        SetBracBankFormValue:(state,action)=>{
+            const {property, value} = action.payload;
+            state.BracBankFormValue[property]=value;
+        },
     }
 })
-export  const {SetInformationShow, SetSendAccountId, SetReceiveAccountId, SetSendAccountName, SetReceiveAccountName, SetEmail, SetRocketFormValue, SetBkashFormValue, SetNagadFormValue, SetCityBankFormValue, SetDutchBanglaFormValue}=accountSlice.actions;
+export  const {SetInformationShow, SetSendAccountId, SetReceiveAccountId, SetSendAccountName, SetReceiveAccountName, SetEmail, SetRocketFormValue, SetBkashFormValue, SetNagadFormValue, SetCityBankFormValue, SetDutchBanglaFormValue, SetPerfectMoneyFormValue, SetWebMoneyFormValue, SetBracBankFormValue}=accountSlice.actions;
 export const selectInformationShow= (state) => state.account.informationShow;
 export const accountSliceReducer = accountSlice.reducer;

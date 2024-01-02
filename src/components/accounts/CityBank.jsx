@@ -3,7 +3,7 @@ import {SetCityBankFormValue, SetEmail} from "../../redux/features/account/accou
 import {useState} from "react";
 import {SetModalOpen} from "../../redux/features/modal/modalSlice.js";
 import Error from "../validation/Error.jsx";
-import InformationModal from "../modal/InformationModal.jsx";
+import OrderModal from "../modal/OrderModal.jsx";
 
 const CityBank = () => {
     const dispatch = useDispatch();
@@ -62,7 +62,7 @@ const CityBank = () => {
                 </div>
             </section>
 
-            <InformationModal/>
+            <OrderModal/>
         </>
     );
 };

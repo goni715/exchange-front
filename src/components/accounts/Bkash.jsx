@@ -1,7 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {SetBkashFormValue, SetEmail} from "../../redux/features/account/accountSlice.js";
 import {SetModalOpen} from "../../redux/features/modal/modalSlice.js";
-import InformationModal from "../modal/InformationModal.jsx";
+import OrderModal from "../modal/OrderModal.jsx";
 import Error from "../validation/Error.jsx";
 import {useState} from "react";
 
@@ -58,7 +58,7 @@ const Bkash = () => {
                 </div>
             </section>
 
-            <InformationModal/>
+            <OrderModal/>
         </>
     );
 };
