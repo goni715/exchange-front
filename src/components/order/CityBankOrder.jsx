@@ -6,6 +6,7 @@ import {BiTransfer} from "react-icons/bi";
 import {useEffect} from "react";
 import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
 import {useNavigate} from "react-router-dom";
+import TransactionModal from "../modal/TransactionModal.jsx";
 
 
 const CityBankOrder = () => {
@@ -60,7 +61,7 @@ const CityBankOrder = () => {
 
     return (
         <>
-            <Modal title="" open={modalOpen} onOk={handleOk} onCancel={handleCancel}>
+            <Modal title="" open={modalOpen} onOk={handleOk}>
                 <h1 className="text-2xl mb-3 pt-3 flex items-center gap-2">
                     <span>{sendAccountName}</span>
                     <BiTransfer size={20}/>
@@ -102,6 +103,9 @@ const CityBankOrder = () => {
                     </div>
                 </div>
             </Modal>
+
+            <TransactionModal/>
+
         </>
     );
 };

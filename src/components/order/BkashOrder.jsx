@@ -54,7 +54,7 @@ const BkashOrder = () => {
 
     return (
         <>
-            <Modal title="" open={modalOpen} onOk={handleOk} onCancel={handleCancel}>
+            <Modal title="" open={modalOpen} onOk={handleOk} >
                 <h1 className="text-2xl mb-3 pt-3 flex items-center gap-2">
                     <span>{sendAccountName} </span>
                     <BiTransfer size={20}/>
@@ -87,7 +87,13 @@ const BkashOrder = () => {
                         <p>{email}</p>
                     </div>
                     <div className="flex mt-6 gap-6">
-                        <button onClick={()=>dispatch(SetTransactionModalOpen(true))} className="w-1/2 px-3 py-2 text-white bg-green-500 text-md font-bold rounded-md">
+                        <button
+                            onClick={()=>{
+                                dispatch(SetModalOpen(false))
+                                dispatch(SetTransactionModalOpen(true))
+                            }}
+                            className="w-1/2 px-3 py-2 text-white bg-green-500 text-md font-bold rounded-md"
+                        >
                             Confirm Order
                         </button>
                         <button onClick={handleCancel} className="w-1/2 px-3 py-2 text-white text-md font-bold bg-red-500 rounded-md">Cancel Order</button>
