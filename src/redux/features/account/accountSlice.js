@@ -44,6 +44,9 @@ export const accountSlice=createSlice({
             accountName:"",
             accountNumber: "",
             contactNumber:""
+        },
+        ReceiveAccountInformation: {
+
         }
     },
     reducers:{
@@ -68,34 +71,42 @@ export const accountSlice=createSlice({
         SetRocketFormValue:(state,action)=>{
             const {property, value} = action.payload;
             state.RocketFormValue[property]=value;
+            state.ReceiveAccountInformation=state.RocketFormValue;
         },
         SetBkashFormValue:(state,action)=>{
             const {property, value} = action.payload;
             state.BkashFormValue[property]=value;
+            state.ReceiveAccountInformation=state.BkashFormValue;
         },
         SetNagadFormValue:(state,action)=>{
             const {property, value} = action.payload;
             state.NagadFormValue[property]=value;
+            state.ReceiveAccountInformation=state.NagadFormValue;
         },
         SetCityBankFormValue:(state,action)=>{
             const {property, value} = action.payload;
             state.CityBankFormValue[property]=value;
+            state.ReceiveAccountInformation=state.CityBankFormValue;
         },
         SetDutchBanglaFormValue:(state,action)=>{
             const {property, value} = action.payload;
             state.DutchBanglaFormValue[property]=value;
+            state.ReceiveAccountInformation=state.DutchBanglaFormValue;
         },
         SetPerfectMoneyFormValue:(state,action)=>{
             const {property, value} = action.payload;
             state.PerfectMoneyFormValue[property]=value;
+            state.ReceiveAccountInformation=state.PerfectMoneyFormValue;
         },
         SetWebMoneyFormValue:(state,action)=>{
             const {property, value} = action.payload;
             state.WebMoneyFormValue[property]=value;
+            state.ReceiveAccountInformation=state.WebMoneyFormValue;
         },
         SetBracBankFormValue:(state,action)=>{
             const {property, value} = action.payload;
             state.BracBankFormValue[property]=value;
+            state.ReceiveAccountInformation=state.BracBankFormValue;
         },
     }
 })

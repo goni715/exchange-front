@@ -17,7 +17,7 @@ export const exchangeApi = apiSlice.injectEndpoints({
                     }
                 }catch(err) {
                     console.log(err)
-                    ErrorToast("Something went wrong!")
+                    // ErrorToast("Something went wrong!")
                 }
             }
         }),

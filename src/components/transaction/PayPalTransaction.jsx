@@ -9,7 +9,7 @@ import {useEffect, useState} from "react";
 import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
 import {SetInformationShow} from "../../redux/features/account/accountSlice.js";
 
-const BkashTransaction = () => {
+const PayPalTransaction = () => {
     const dispatch = useDispatch();
     const navigate=useNavigate();
     const transactionModalOpen = useSelector(selectTransactionModalOpen);
@@ -52,13 +52,11 @@ const BkashTransaction = () => {
     }
 
 
-
-
     return (
         <>
             <Modal title="" open={transactionModalOpen} onOk={handleOk}>
                 <h1 className="text-2xl mb-3 pt-3 flex items-center gap-2">
-                   Data About Transfer
+                    Data About Transfer
                 </h1>
                 <div>
                     <div className="border-t border-b border-gray-300 py-2">
@@ -67,17 +65,21 @@ const BkashTransaction = () => {
                         </p>
                     </div>
                     <div className="flex justify-between border-b border-gray-300 py-2">
-                        Our বিকাশ details
+                        Our PayPal. details
                     </div>
                     <div className="flex justify-between border-b border-gray-300 bg-[#f9f9f9] py-2">
-                        <p>Bkash Agent No. (Cash Out)</p>
-                        <p>01755892955</p>
+                        <p>PayPal Email</p>
+                        <p>Contact live chat or What's app support</p>
                     </div>
                     <div className="flex justify-between border-b border-gray-300 py-2">
+                        <p>Contact Mobile No.</p>
+                        <p>Contact live chat or What's app support</p>
+                    </div>
+                    <div className="flex justify-between border-b border-gray-300 bg-[#f9f9f9] py-2">
                         <p>Enter payment amount</p>
                         <p>{sendAmount}</p>
                     </div>
-                    <div className="flex justify-between border-b border-gray-300 bg-[#f9f9f9] py-2">
+                    <div className="flex justify-between border-b border-gray-300 py-2">
                         <p>Enter payment description</p>
                         <p>Exchange {sendAmount}</p>
                     </div>
@@ -101,4 +103,4 @@ const BkashTransaction = () => {
     );
 };
 
-export default BkashTransaction;
+export default PayPalTransaction;

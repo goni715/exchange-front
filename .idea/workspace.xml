@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4e336808-53ad-443c-a063-369c627ffb71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/order/BkashOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/BkashOrder.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/order/BracBankOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/BracBankOrder.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/order/CityBankOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/CityBankOrder.jsx" afterDir="false" />
@@ -21,7 +22,12 @@
       <change beforePath="$PROJECT_DIR$/src/components/transaction/NagadTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/NagadTransaction.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/transaction/PerfectMoneyTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/PerfectMoneyTransaction.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/transaction/RocketTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/RocketTransaction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/transaction/Transaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/Transaction.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/transaction/WebMoneyTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/WebMoneyTransaction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/account/accountSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/account/accountSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/api/apiSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/api/apiSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/auth/authApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/auth/authApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/exchange/exchangeApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/exchange/exchangeApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +158,11 @@
       <workItem from="1704200369455" duration="2928000" />
       <workItem from="1704205280415" duration="2207000" />
       <workItem from="1704207534587" duration="128000" />
-      <workItem from="1704218436000" duration="6769000" />
+      <workItem from="1704218436000" duration="6989000" />
+      <workItem from="1704258430433" duration="4125000" />
+      <workItem from="1704266157849" duration="340000" />
+      <workItem from="1704266691874" duration="1798000" />
+      <workItem from="1704281720681" duration="1695000" />
     </task>
     <servers />
   </component>

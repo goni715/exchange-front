@@ -11,8 +11,17 @@ const Login = () => {
     const dispatch = useDispatch();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [login, {isLoading}] = useLoginMutation();
+    const [login, {isLoading, isSuccess}] = useLoginMutation();
     const error = useSelector((state)=> state.auth.LoginError);
+
+
+    useEffect(()=>{
+        if(isSuccess){
+            navigate('/account/exchanges')
+        }
+    },[isSuccess, dispatch, navigate])
+
+
 
 
     const handleSubmit = () => {

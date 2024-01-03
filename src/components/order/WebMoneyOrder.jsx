@@ -22,8 +22,6 @@ const WebMoneyOrder = () => {
         dispatch(SetModalOpen(false));
     };
     const handleCancel = () => {
-        dispatch(SetInformationShow(false));
-        dispatch(SetModalOpen(false));
         navigate(0)
     };
 
@@ -69,7 +67,7 @@ const WebMoneyOrder = () => {
                             This exchange is done manually by an operator. Work time: 11 AM - 11 PM, GMT+06
                         </p>
                     </div>
-                    <div className="flex justify-between border-b border-gray-300 py-2">
+                    <div className="flex justify-between border-b border-gray-300 bg-[#f9f9f9] py-2">
                         <p>Amount Send</p>
                         <p>{sendAmount}</p>
                     </div>
@@ -77,7 +75,7 @@ const WebMoneyOrder = () => {
                         <p>Amount receive</p>
                         <p>{receiveAmount}</p>
                     </div>
-                    <div className="flex justify-between border-b border-gray-300 py-2">
+                    <div className="flex justify-between border-b border-gray-300 bg-[#f9f9f9] py-2">
                         <p>WMZ Purse Id</p>
                         <p>{wmzPurseId}</p>
                     </div>
@@ -85,11 +83,12 @@ const WebMoneyOrder = () => {
                         <p>Contact Mobile No.</p>
                         <p>{contactNumber}</p>
                     </div>
-                    <div className="flex justify-between border-b border-gray-300 py-2">
+                    <div className="flex justify-between border-b border-gray-300 bg-[#f9f9f9] py-2">
                         <p>Your Email Address</p>
                         <p>{email}</p>
                     </div>
                     <div className="flex mt-6 gap-6">
+                        <button onClick={handleCancel} className="w-1/2 px-3 py-2 text-white text-md font-bold bg-red-500 hover:bg-red-700 rounded-md">Cancel Order</button>
                         <button
                             onClick={()=>{
                                 dispatch(SetModalOpen(false))
@@ -99,7 +98,6 @@ const WebMoneyOrder = () => {
                         >
                             Confirm Order
                         </button>
-                        <button onClick={handleCancel} className="w-1/2 px-3 py-2 text-white text-md font-bold bg-red-500 hover:bg-red-700 rounded-md">Cancel Order</button>
                     </div>
                 </div>
             </Modal>

@@ -7,12 +7,19 @@ import {
 import {SetInformationShow} from "../../redux/features/account/accountSlice.js";
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
 
 const NagadTransaction = () => {
     const dispatch = useDispatch();
     const navigate= useNavigate();
     const transactionModalOpen = useSelector(selectTransactionModalOpen);
+    const {email,sendAccountId,receiveAccountId, ReceiveAccountInformation} = useSelector((state)=>state.account);
     const {sendAmount,receiveAmount }= useSelector((state)=>state.rate) || {};
+    const [transactionOrBatch, setTransactionOrBatch] = useState("");
+    const [exchangeCreate, {isLoading, isSuccess}] = useExchangeCreateMutation();
+
+
 
 
     const handleOk = () => {
@@ -24,6 +31,31 @@ const NagadTransaction = () => {
         // dispatch(SetTransactionModalOpen(false));
         navigate(0)
     };
+
+
+
+    useEffect(()=>{
+        if(isSuccess){
+            dispatch(SetInformationShow(false));
+            dispatch(SetModalOpen(false));
+            dispatch(SetTransactionModalOpen(false))
+            navigate('/account/exchanges')
+        }
+    },[isSuccess, dispatch, navigate])
+
+
+    const handleSubmit = () => {
+        exchangeCreate({
+            transactionOrBatch,
+            email,
+            sendAccountId,
+            receiveAccountId,
+            sendAmount,
+            receiveAmount,
+            information: ReceiveAccountInformation
+        })
+    }
+
 
     return (
         <>
@@ -41,7 +73,7 @@ const NagadTransaction = () => {
                         Our Nagad details
                     </div>
                     <div className="flex justify-between border-b border-gray-300 bg-[#f9f9f9] py-2">
-                        <p>Nagad Agent No. (Cash Out) 	01755892955</p>
+                        <p>Nagad Agent No. (Cash Out) </p>
                         <p>01755892955</p>
                     </div>
                     <div className="flex justify-between border-b border-gray-300 py-2">
@@ -53,17 +85,17 @@ const NagadTransaction = () => {
                         <p>Exchange {sendAmount}</p>
                     </div>
                     <div className="pt-2">
-                        <label className="block pb-2" htmlFor="email">
+                        <label className="block pb-2" htmlFor="transaction">
                             Enter transaction number/batch
                         </label>
-                        <input className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="email" id="email"/>
+                        <input onChange={(e)=>setTransactionOrBatch(e.target.value)} value={transactionOrBatch} className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="text" id="transaction"/>
                     </div>
                     <div className="flex mt-6 gap-6">
                         <button onClick={handleCancel} className="w-1/2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                             Cancel
                         </button>
-                        <button className="w-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                            Confirm Transaction
+                        <button onClick={handleSubmit} disabled={isLoading} className="w-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            {isLoading ? "Processing..." : "Confirm Transaction"}
                         </button>
                     </div>
                 </div>
