@@ -15,7 +15,6 @@ const PerfectMoneyOrder = () => {
     const {email, sendAccountName, receiveAccountName, PerfectMoneyFormValue} = useSelector((state)=>state.account);
     const {perfectUID, contactNumber} = PerfectMoneyFormValue;
     const {sendAmount,receiveAmount }= useSelector((state)=>state.rate) || {};
-    const [exchangeCreate, {isLoading, isSuccess}] = useExchangeCreateMutation();
 
 
     const handleOk = () => {
@@ -26,29 +25,6 @@ const PerfectMoneyOrder = () => {
     };
 
 
-
-    useEffect(()=>{
-        if(isSuccess){
-            dispatch(SetInformationShow(false));
-            dispatch(SetModalOpen(false));
-            navigate('/account/exchanges')
-        }
-    },[isSuccess, dispatch, navigate])
-
-
-    // const handleSubmit = () => {
-    //     // exchangeCreate({
-    //     //     email,
-    //     //     sendAccountId,
-    //     //     receiveAccountId,
-    //     //     sendAmount,
-    //     //     receiveAmount,
-    //     //     information: {
-    //     //         personalNumber,
-    //     //         contactNumber
-    //     //     }
-    //     // })
-    // }
 
 
 

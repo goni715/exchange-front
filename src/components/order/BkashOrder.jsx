@@ -25,28 +25,6 @@ const BkashOrder = () => {
     };
 
 
-    // useEffect(()=>{
-    //     if(isSuccess){
-    //         dispatch(SetInformationShow(false));
-    //         dispatch(SetModalOpen(false));
-    //         navigate('/account/exchanges')
-    //     }
-    // },[isSuccess, dispatch, navigate])
-
-
-    // const handleSubmit = () => {
-    //     exchangeCreate({
-    //         email,
-    //         sendAccountId,
-    //         receiveAccountId,
-    //         sendAmount,
-    //         receiveAmount,
-    //         information: {
-    //             personalNumber,
-    //             contactNumber
-    //         }
-    //     })
-    // }
 
 
 

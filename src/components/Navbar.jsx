@@ -46,7 +46,7 @@ const Navbar = () => {
                                     </a>
                                 </Link>
                                 <li onClick={()=>logout()} className="my-6 md:my-0">
-                                    <button className="w-full text-white bg-fuchsia-700 font-medium rounded-lg px-3.5 py-3 text-center hover:bg-indigo-500 hover:drop-shadow-md transition duration-300 ease-in-out">
+                                    <button className="w-full text-white bg-fuchsia-500 font-medium rounded-lg px-3.5 py-3 text-center hover:bg-fuchsia-700 hover:drop-shadow-md transition duration-300 ease-in-out">
                                         Logout
                                     </button>
                                 </li>
@@ -57,7 +57,7 @@ const Navbar = () => {
                                      <a className="font-medium duration-500 text-white hover:text-indigo-600" href="">Login</a>
                                  </Link>
                                  <Link to="/register">
-                                     <button className="w-full text-white bg-fuchsia-700 font-medium rounded-lg px-3.5 py-3 text-center hover:bg-indigo-500 hover:drop-shadow-md transition duration-300 ease-in-out">
+                                     <button className="w-full text-white bg-fuchsia-500 font-medium rounded-lg px-3.5 py-3 text-center hover:bg-fuchsia-700 hover:drop-shadow-md transition duration-300 ease-in-out">
                                          Register
                                      </button>
                                  </Link>

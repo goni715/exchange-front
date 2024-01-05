@@ -22,12 +22,11 @@ const Home = () => {
     const {data:receiveAccounts} = receiveData || {};
 
     const [getRate] = useGetRateMutation();
-    const [send, setSend]= useState("658d2e2a61d015e063fd92dd");
-    const [receive, setReceive]= useState("658d2f2161d015e063fd92f4");
     const {unit, current, sendValue, receiveValue, reserved, reservedValue,minimum, minimumValue }= useSelector((state)=>state.rate) || {};
+    const {sendAccountId, receiveAccountId }= useSelector((state)=>state.account) || {};
 
-    const {data:receiveAccountData} = useGetReceiveAccountQuery(receive);
-    const {data:sendAccountData} = useGetSendAccountQuery(send);
+    const {data:receiveAccountData} = useGetReceiveAccountQuery(receiveAccountId);
+    const {data:sendAccountData} = useGetSendAccountQuery(sendAccountId);
     const [error, setError]= useState("");
 
 
@@ -35,13 +34,13 @@ const Home = () => {
 
 
     useEffect(()=>{
-        if(send !=="" && receive !==""){
+        if(sendAccountId !=="" && receiveAccountId !==""){
             getRate({
-                firstId:send,
-                secondId:receive
+                firstId:sendAccountId,
+                secondId:receiveAccountId
             })
         }
-    },[send, receive, getRate])
+    },[sendAccountId, receiveAccountId, getRate])
 
 
 
@@ -84,10 +83,9 @@ const Home = () => {
                             <h3 className="mb-3 px-4">Send From</h3>
                             <select
                                 onChange={(e)=>{
-                                    setSend(e.target.value);
                                     dispatch(SetSendAccountId(e.target.value));
                                 }}
-                                value={send}
+                                value={sendAccountId}
                                 className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" name="" id="">
                                 {sendAccounts?.length>0 &&(
                                     <>
@@ -114,10 +112,9 @@ const Home = () => {
                             <h3 className="mb-3 px-4">Receive To</h3>
                             <select
                                 onChange={(e)=>{
-                                    setReceive(e.target.value);
                                     dispatch(SetReceiveAccountId(e.target.value));
                                 }}
-                                value={receive}
+                                value={receiveAccountId}
                                 className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
                                 {receiveAccounts?.length>0 &&(
                                     <>
