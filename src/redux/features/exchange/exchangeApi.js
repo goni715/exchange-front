@@ -34,9 +34,23 @@ export const exchangeApi = apiSlice.injectEndpoints({
                     console.log(err);
                 }
             },
+        }),
+        getRecentCompletedExchanges: builder.query({
+            query: () => `/exchange/get-recent-completed-exchanges`,
+            keepUnusedDataFor:600,
+            async onQueryStarted(arg, {queryFulfilled, dispatch }){
+                try{
+                    const res = await queryFulfilled;
+                    const data = res?.data?.data;
+                }catch(err) {
+                    ErrorToast("Something Went Wrong!");
+                    //do nothing
+                    console.log(err);
+                }
+            },
         })
     }),
 })
 
 
-export const {useExchangeCreateMutation, useGetUserExchangesQuery} = exchangeApi;
+export const {useExchangeCreateMutation, useGetUserExchangesQuery, useGetRecentCompletedExchangesQuery} = exchangeApi;

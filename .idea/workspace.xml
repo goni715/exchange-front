@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4e336808-53ad-443c-a063-369c627ffb71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/BkashOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/BkashOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/PerfectMoneyOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/PerfectMoneyOrder.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/exchanges/ExchangesItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/exchanges/ExchangesItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/exchanges/MyExchanges.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/exchanges/MyExchanges.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/features/api/apiSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/api/apiSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/exchange/exchangeApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/exchange/exchangeApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +156,12 @@
       <workItem from="1704349668043" duration="191000" />
       <workItem from="1704447240252" duration="907000" />
       <workItem from="1704449523842" duration="202000" />
+      <workItem from="1704450387269" duration="96000" />
+      <workItem from="1704596045454" duration="88000" />
+      <workItem from="1704647168519" duration="2673000" />
+      <workItem from="1704650544719" duration="30000" />
+      <workItem from="1704650617475" duration="2410000" />
+      <workItem from="1704657257407" duration="238000" />
     </task>
     <servers />
   </component>

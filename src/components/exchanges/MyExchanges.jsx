@@ -14,10 +14,10 @@ const MyExchanges = () => {
                         <hr/>
                     </div>
                     <div className="bg-white py-6 px-6 w-full overflow-x-auto">
-                        {isLoading ? "Loading..."
+                        {isLoading ? "..."
                             :(
                                 <>
-                                    {ExchangeList.length>0 && (
+                                    {ExchangeList.length>0 ? (
                                        ExchangeList.map((item,i)=>{
                                            return(
                                                <>
@@ -25,7 +25,11 @@ const MyExchanges = () => {
                                                </>
                                            )
                                        })
-                                      )
+                                      ) : (
+                                          <>
+                                              <h3 className="text-gray-500 font-bold text-3xl">There is no exchanges</h3>
+                                          </>
+                                    )
                                     }
                                 </>
                             )

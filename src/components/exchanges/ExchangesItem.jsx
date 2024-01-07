@@ -1,6 +1,6 @@
 
 const ExchangesItem = ({item}) => {
-    const {_id, sendAmount, receiveAmount, status, sendAccount, receiveAccount}= item;
+    const {_id, sendAmount, receiveAmount, status, sendAccount, receiveAccount}= item || {};
     const {name:sendAccountName}= sendAccount[0] || {};
     const {name:receiveAccountName}= receiveAccount[0] || {};
     return (
@@ -14,15 +14,11 @@ const ExchangesItem = ({item}) => {
                     <p>Send (From): {sendAmount}</p>
                     <p>Receive (To): {receiveAmount}</p>
                     <p> Process type: Manually</p>
-                    <p> Status: {status}</p>
+                    <p>
+                        Status:
+                        <span className={`text-white font-bold py-1 ml-1 bg-green-500 px-2 rounded ${(status==="Pending" && "bg-red-500") || (status==="Cancelled" && "bg-green-500") || (status==="Timeout" && "bg-blue-500") || (status==="Completed" && "bg-yellow-500") || (status==="Processing" && "bg-gray-500") || (status==="Awaiting Payment" && "bg-cyan-500") || (status==="Awaiting Confirmation" && "bg-fuchsia-500") || (status==="Denied" && "bg-lime-500")}`}>{status}</span>
+                    </p>
                 </div>
-                {/*Alert Part*/}
-                {/*<div className="bg-[#f9f9f9] pt-2 pb-6">*/}
-                {/*    <div className="text-center p-3 flex justify-center items-center text-[#31708f] bg-[#d9edf7] rounded border border-[#bce8f1]">*/}
-                {/*        We are still waiting for confirmation of your exchange. Click here to take action.*/}
-                {/*    </div>*/}
-                {/*</div>*/}
-                {/*Alert Part*/}
             </div>
         </>
     );
