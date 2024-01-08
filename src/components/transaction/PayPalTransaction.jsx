@@ -8,7 +8,6 @@ import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
 import {SetInformationShow} from "../../redux/features/account/accountSlice.js";
-import {useGetInformationQuery} from "../../redux/features/information/InformationApi.js";
 
 const PayPalTransaction = () => {
     const dispatch = useDispatch();

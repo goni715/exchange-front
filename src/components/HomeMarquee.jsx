@@ -17,25 +17,25 @@ const HomeMarquee = () => {
                     <div className="grid grid-cols-1">
                         <div className="marquee-inner-wrapper">
                             <Marquee>
-                                <div className="mx-4 w-3/12">
+                                <div className="mx-0 md:mx-4 w-2/12 md:w-3/12">
                                     <img className="h-[60px] w-[250px]" src={bkash} alt="marquee"/>
                                 </div>
-                                <div className="mx-4 w-3/12">
+                                <div className="mx-0 md:mx-4 w-2/12 md:w-3/12">
                                     <img className="h-[80px] w-[250px]" src={rocket} alt="marquee"/>
                                 </div>
-                                <div className="mx-4 w-3/12">
+                                <div className="mx-0 md:mx-4 w-2/12 md:w-3/12">
                                     <img className="h-[80px] w-[250px]" src={dbbl} alt="marquee"/>
                                 </div>
-                                <div className="mx-4 w-3/12">
+                                <div className="mx-0 md:mx-4 w-2/12 md:w-3/12">
                                     <img className="h-[80px] w-[250px]" src={paypal} alt="marquee"/>
                                 </div>
-                                <div className="mx-4 w-3/12">
+                                <div className="mx-0 md:mx-4 w-2/12 md:w-3/12">
                                     <img className="h-[80px] w-[250px]" src={cityBank} alt="marquee"/>
                                 </div>
-                                <div className="mx-4 w-3/12">
+                                <div className="mx-0 md:mx-4 w-2/12 md:w-3/12">
                                     <img className="h-[80px] w-[250px]" src={nagad} alt="marquee"/>
                                 </div>
-                                <div className="mx-4 w-3/12">
+                                <div className="mx-0 md:mx-4 w-2/12 md:w-3/12">
                                     <img className="h-[80px] w-[250px]" src={brac} alt="marquee"/>
                                 </div>
                             </Marquee>

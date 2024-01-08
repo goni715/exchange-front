@@ -1,6 +1,6 @@
 import {IoMdClose, IoMdMenu} from "react-icons/io";
 import logo from '../assets/images/logo.svg';
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {getToken, getUserDetails, logout} from "../helper/SessionHelper.js";
 import {useState} from "react";
 
@@ -42,8 +42,8 @@ const Navbar = () => {
                     <ul className={`p-5 z-10 absolute bg-white/80 md:bg-blue-950 backdrop-blur w-full left-0 py-4 top-[-400px] ${open ? "opacity-100 top-[80px]" : "opacity-0"}  transition-all ease-in duration-500 md:p-0 md:flex md:items-center md:space-x-8 md:static md:w-auto md:opacity-100`}>
                         <li
                             onClick={()=>{
-                                navigate(0)
                                 navigate('/')
+                                navigate(0)
                             }}
                             className="md:my-0">
                             <span className="cursor-pointer font-medium duration-500 text-black md:text-white" >Exchange</span>

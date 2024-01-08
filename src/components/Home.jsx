@@ -78,8 +78,8 @@ const Home = () => {
                        )
                     }
                 </div>
-                <div className="md:px-12 flex justify-center gap-8">
-                        <div className="w-1/5 bg-white">
+                <div className="md:px-12 flex flex-col items-center md:flex-row md:justify-center gap-8">
+                        <div className="w-[300px] md:w-2/5 lg:w-1/4 bg-white">
                             <h3 className="mb-3 px-4">Send From</h3>
                             <select
                                 onChange={(e)=>{
@@ -108,7 +108,7 @@ const Home = () => {
                                 Exchange rate: {unit} = {current}
                             </div>
                         </div>
-                        <div className="w-1/5 bg-white">
+                        <div className="w-[300px] md:w-2/5 lg:w-1/4 bg-white">
                             <h3 className="mb-3 px-4">Receive To</h3>
                             <select
                                 onChange={(e)=>{

@@ -1,10 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {selectModalOpen, SetModalOpen, SetTransactionModalOpen} from "../../redux/features/modal/modalSlice.js";
-import {SetInformationShow} from "../../redux/features/account/accountSlice.js";
 import {BiTransfer} from "react-icons/bi";
 import {Modal} from "antd";
-import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
-import {useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import TransactionModal from "../modal/TransactionModal.jsx";
 
@@ -15,7 +12,6 @@ const WebMoneyOrder = () => {
     const {email, sendAccountName, receiveAccountName, WebMoneyFormValue} = useSelector((state)=>state.account);
     const {wmzPurseId, contactNumber} = WebMoneyFormValue;
     const {sendAmount,receiveAmount }= useSelector((state)=>state.rate) || {};
-    const [exchangeCreate, {isLoading, isSuccess}] = useExchangeCreateMutation();
 
 
     const handleOk = () => {
@@ -24,31 +20,6 @@ const WebMoneyOrder = () => {
     const handleCancel = () => {
         navigate(0)
     };
-
-
-
-    useEffect(()=>{
-        if(isSuccess){
-            dispatch(SetInformationShow(false));
-            dispatch(SetModalOpen(false));
-            navigate('/account/exchanges')
-        }
-    },[isSuccess, dispatch, navigate])
-
-
-    // const handleSubmit = () => {
-    //     // exchangeCreate({
-    //     //     email,
-    //     //     sendAccountId,
-    //     //     receiveAccountId,
-    //     //     sendAmount,
-    //     //     receiveAmount,
-    //     //     information: {
-    //     //         personalNumber,
-    //     //         contactNumber
-    //     //     }
-    //     // })
-    // }
 
 
 

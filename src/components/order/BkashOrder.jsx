@@ -1,10 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {selectModalOpen, SetModalOpen, SetTransactionModalOpen} from "../../redux/features/modal/modalSlice.js";
-import {SetInformationShow} from "../../redux/features/account/accountSlice.js";
 import {BiTransfer} from "react-icons/bi";
 import {Modal} from "antd";
-import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
-import {useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import TransactionModal from "../modal/TransactionModal.jsx";
 

@@ -8,7 +8,7 @@ const Contact = () => {
     const {success} = useSelector((state)=> state.contact) || {};
     const {data} = useGetInformationQuery();
     const information = data?.data || {};
-    const {email, skype, whatsapp, bkashAgent, nagadAgent, rocketAgent, cityBankAccountName, cityBankAccountNumber, bracBankAccountName, bracBankAccountNumber, dbblAccountName, dbblAccountNumber, wmzPurseId, perfectUID, payeerId, advCashUID, tetherUSDT} = information || {};
+    const {email, skype, whatsapp} = information || {};
 
 
     return (
@@ -24,8 +24,8 @@ const Contact = () => {
                                 </Success>
                             )
                         }
-                        <div className="flex w-full mt-4">
-                            <div className="w-3/12 flex flex-col gap-6">
+                        <div className="flex flex-col md:flex-row w-full mt-4 gap-6">
+                            <div className="md:w-2/5 lg:w-3/12 flex flex-col gap-6">
                                 <div className="text-[#6f6f6f]">
                                     <b className="font-bold flex items-center text-[#6f6f6f]">
                                         <FaWhatsapp size={16} className="mr-1"/>

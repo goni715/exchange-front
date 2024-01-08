@@ -1,5 +1,4 @@
 import {apiSlice} from "../api/apiSlice.js";
-import {ErrorToast, SuccessToast} from "../../../helper/ValidationHelper.js";
 
 export const exchangeApi = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
@@ -13,7 +12,7 @@ export const exchangeApi = apiSlice.injectEndpoints({
                 try{
                     const res = await queryFulfilled;
                     if(res?.data?.message === "success"){
-                        SuccessToast("Exchange Create Success");
+                        // SuccessToast("Exchange Create Success");
                     }
                 }catch(err) {
                     console.log(err)
@@ -29,7 +28,7 @@ export const exchangeApi = apiSlice.injectEndpoints({
                     const res = await queryFulfilled;
                     const data = res?.data?.data;
                 }catch(err) {
-                    ErrorToast("Something Went Wrong!");
+                    // ErrorToast("Something Went Wrong!");
                     //do nothing
                     console.log(err);
                 }
@@ -43,7 +42,7 @@ export const exchangeApi = apiSlice.injectEndpoints({
                     const res = await queryFulfilled;
                     const data = res?.data?.data;
                 }catch(err) {
-                    ErrorToast("Something Went Wrong!");
+                    // ErrorToast("Something Went Wrong!");
                     //do nothing
                     console.log(err);
                 }

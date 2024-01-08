@@ -27,7 +27,7 @@ const ContactForm = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit} className="w-9/12">
+            <form onSubmit={handleSubmit} className="md:w-1/2 lg:w-9/12">
                 <div className="mb-3">
                     <label className="block pb-2" htmlFor="name">
                         Your name
