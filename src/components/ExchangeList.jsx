@@ -83,7 +83,7 @@ const ExchangeList = () => {
         <>
             {content}
             <section id="main" className="py-10">
-                <h1 className="text-center font-bold text-3xl mb-3">Recent Completed Exchanges</h1>
+                <h1 className="text-center font-bold text-3xl mb-5">Recent Exchanges</h1>
                 <div className="px-12 bg-white w-auto overflow-x-auto">
                     <Table columns={columns} dataSource={tableData} />
                 </div>

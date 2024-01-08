@@ -16,7 +16,7 @@ const ExchangesItem = ({item}) => {
                     <p> Process type: Manually</p>
                     <p>
                         Status:
-                        <span className={`text-white font-bold py-1 ml-1 bg-green-500 px-2 rounded ${(status==="Pending" && "bg-red-500") || (status==="Cancelled" && "bg-green-500") || (status==="Timeout" && "bg-blue-500") || (status==="Completed" && "bg-yellow-500") || (status==="Processing" && "bg-gray-500") || (status==="Awaiting Payment" && "bg-cyan-500") || (status==="Awaiting Confirmation" && "bg-fuchsia-500") || (status==="Denied" && "bg-lime-500")}`}>{status}</span>
+                        <span className={`text-white font-bold py-1 ml-1 bg-green-500 px-2 rounded ${(status==="Pending" && "bg-gray-500") || (status==="Cancelled" && "bg-lime-500") || (status==="Timeout" && "bg-blue-500") || (status==="Completed" && "bg-green-500") || (status==="Processing" && "bg-yellow-500") || (status==="Awaiting Payment" && "bg-cyan-500") || (status==="Awaiting Confirmation" && "bg-fuchsia-500") || (status==="Denied" && "bg-red-500")}`}>{status}</span>
                     </p>
                 </div>
             </div>

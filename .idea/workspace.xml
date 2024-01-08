@@ -6,13 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="4e336808-53ad-443c-a063-369c627ffb71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ExchangeList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExchangeList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contact/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact/Contact.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/exchanges/ExchangesItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/exchanges/ExchangesItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/exchanges/MyExchanges.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/exchanges/MyExchanges.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/transaction/AdvCashTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/AdvCashTransaction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/transaction/BkashTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/BkashTransaction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/transaction/BracBankTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/BracBankTransaction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/transaction/CityBankTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/CityBankTransaction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/transaction/DutchBanglaTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/DutchBanglaTransaction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/transaction/NagadTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/NagadTransaction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/transaction/PayPalTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/PayPalTransaction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/transaction/PayeerTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/PayeerTransaction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/transaction/PerfectMoneyTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/PerfectMoneyTransaction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/transaction/RocketTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/RocketTransaction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/transaction/TetherTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/TetherTransaction.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/transaction/WebMoneyTransaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/WebMoneyTransaction.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/features/api/apiSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/api/apiSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/features/exchange/exchangeApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/exchange/exchangeApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,6 +171,16 @@
       <workItem from="1704650544719" duration="30000" />
       <workItem from="1704650617475" duration="2410000" />
       <workItem from="1704657257407" duration="238000" />
+      <workItem from="1704684058085" duration="8000" />
+      <workItem from="1704687096724" duration="162000" />
+      <workItem from="1704694683322" duration="55000" />
+      <workItem from="1704694916233" duration="61000" />
+      <workItem from="1704696191936" duration="315000" />
+      <workItem from="1704704319642" duration="40000" />
+      <workItem from="1704704413272" duration="685000" />
+      <workItem from="1704708327563" duration="539000" />
+      <workItem from="1704712544308" duration="10000" />
+      <workItem from="1704713261903" duration="116000" />
     </task>
     <servers />
   </component>

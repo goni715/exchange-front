@@ -8,6 +8,7 @@ import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
 import {SetInformationShow} from "../../redux/features/account/accountSlice.js";
+import {useGetInformationQuery} from "../../redux/features/information/InformationApi.js";
 
 const TetherTransaction = () => {
     const dispatch = useDispatch();
@@ -17,6 +18,10 @@ const TetherTransaction = () => {
     const {sendAmount,receiveAmount }= useSelector((state)=>state.rate) || {};
     const [transactionOrBatch, setTransactionOrBatch] = useState("");
     const [exchangeCreate, {isLoading, isSuccess}] = useExchangeCreateMutation();
+    const {data} = useGetInformationQuery();
+    const information = data?.data || {};
+    const {tetherUSDT} = information || {};
+
 
 
 
@@ -70,7 +75,7 @@ const TetherTransaction = () => {
                     </div>
                     <div className="flex justify-between border-b border-gray-300 bg-[#f9f9f9] py-2">
                         <p>Tether (TRC20) USDT</p>
-                        <p>TNRsFVXz8AorZLuPpzfcdd24FqAwTgF8v9</p>
+                        <p>{tetherUSDT || "..."}</p>
                     </div>
                     <div className="flex justify-between border-b border-gray-300 py-2">
                         <p>Enter payment amount</p>

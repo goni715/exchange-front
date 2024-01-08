@@ -2,9 +2,14 @@ import {FaWhatsapp} from "react-icons/fa";
 import ContactForm from "./ContactForm.jsx";
 import {useSelector} from "react-redux";
 import Success from "../validation/Success.jsx";
+import {useGetInformationQuery} from "../../redux/features/information/InformationApi.js";
 
 const Contact = () => {
     const {success} = useSelector((state)=> state.contact) || {};
+    const {data} = useGetInformationQuery();
+    const information = data?.data || {};
+    const {email, skype, whatsapp, bkashAgent, nagadAgent, rocketAgent, cityBankAccountName, cityBankAccountNumber, bracBankAccountName, bracBankAccountNumber, dbblAccountName, dbblAccountNumber, wmzPurseId, perfectUID, payeerId, advCashUID, tetherUSDT} = information || {};
+
 
     return (
         <>
@@ -26,21 +31,21 @@ const Contact = () => {
                                         <FaWhatsapp size={16} className="mr-1"/>
                                         Skype
                                     </b>
-                                    usdcarebd@gmail.com
+                                    {skype || "..."}
                                 </div>
                                 <div className="text-[#6f6f6f]">
                                     <b className="font-bold flex items-center text-[#6f6f6f]">
                                         <FaWhatsapp size={16} className="mr-1"/>
                                         Whatsapp
                                     </b>
-                                    +1234567890
+                                    {whatsapp || "..."}
                                 </div>
                                 <div className="text-[#6f6f6f]">
                                     <b className="font-bold flex items-center text-[#6f6f6f]">
                                         <FaWhatsapp size={16} className="mr-1"/>
                                         Support email
                                     </b>
-                                    usdcarebd@gmail.com
+                                    {email || "..."}
                                 </div>
                             </div>
                             <ContactForm/>

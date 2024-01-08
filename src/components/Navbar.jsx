@@ -1,10 +1,18 @@
-import {IoMdMenu} from "react-icons/io";
+import {IoMdClose, IoMdMenu} from "react-icons/io";
 import logo from '../assets/images/logo.svg';
 import {Link, useNavigate} from "react-router-dom";
 import {getToken, getUserDetails, logout} from "../helper/SessionHelper.js";
+import {useState} from "react";
 
 const Navbar = () => {
     const navigate = useNavigate();
+    const [open, setOpen] = useState(false)
+
+
+    const handleClick = () => {
+        setOpen(!open)
+    }
+
     const user = getUserDetails();
 
     return (
@@ -23,28 +31,33 @@ const Navbar = () => {
                             <span className="text-2xl text-white font-bold">Exchange</span>
                         </div>
                         <span className="block cursor-pointer text-3xl text-black bg-gray-100 p-2 rounded-lg md:hidden">
-                            <IoMdMenu size={25}/>
+                             {open ? (
+                                 <IoMdClose onClick={handleClick} size={25}/>
+                             ): (
+                                 <IoMdMenu onClick={handleClick} size={25}/>
+                             )
+                             }
                         </span>
                     </div>
-                    <ul className="p-5 z-10 absolute backdrop-blur w-full left-0 py-4 opacity-0 top-[-400px] transition-all ease-in duration-500 md:p-0 md:flex md:items-center md:space-x-8 md:static md:w-auto md:opacity-100">
+                    <ul className={`p-5 z-10 absolute bg-white/80 md:bg-blue-950 backdrop-blur w-full left-0 py-4 top-[-400px] ${open ? "opacity-100 top-[80px]" : "opacity-0"}  transition-all ease-in duration-500 md:p-0 md:flex md:items-center md:space-x-8 md:static md:w-auto md:opacity-100`}>
                         <li
                             onClick={()=>{
                                 navigate(0)
                                 navigate('/')
                             }}
                             className="md:my-0">
-                            <a className="font-medium duration-500 text-white" href="">Exchange</a>
+                            <span className="cursor-pointer font-medium duration-500 text-black md:text-white" >Exchange</span>
                         </li>
-                        <Link to="/contact" className="my-6 md:my-0">
-                            <a className="font-medium duration-500 text-white" href="">Contact</a>
-                        </Link>
+                        <li onClick={()=>navigate('/contact')} className="my-6 md:my-0">
+                            <span className="cursor-pointer font-medium duration-500 text-black md:text-white" >Contact</span>
+                        </li>
                         {getToken() ? (
                             <>
-                                <Link to="/account/exchanges" className="my-6 md:my-0">
-                                    <a className="font-medium duration-500 text-white" href="">
+                                <li onClick={()=>navigate("/account/exchanges")} className="my-6 md:my-0">
+                                    <span className="cursor-pointer font-medium duration-500 text-black md:text-white" >
                                         {user?.username}
-                                    </a>
-                                </Link>
+                                    </span>
+                                </li>
                                 <li onClick={()=>logout()} className="my-6 md:my-0">
                                     <button className="w-full text-white bg-fuchsia-500 font-medium rounded-lg px-3.5 py-3 text-center hover:bg-fuchsia-700 hover:drop-shadow-md transition duration-300 ease-in-out">
                                         Logout
@@ -53,14 +66,14 @@ const Navbar = () => {
                             </>
                          ): (
                              <>
-                                 <Link to="/login" className="my-6 md:my-0">
-                                     <a className="font-medium duration-500 text-white hover:text-indigo-600" href="">Login</a>
-                                 </Link>
-                                 <Link to="/register">
+                                 <li onClick={()=>navigate('/login')} className="my-6 md:my-0">
+                                     <span className="cursor-pointer font-medium duration-500 text-black md:text-white hover:text-indigo-900 md:hover:text-white">Login</span>
+                                 </li>
+                                 <li onClick={()=>navigate('/register')}>
                                      <button className="w-full text-white bg-fuchsia-500 font-medium rounded-lg px-3.5 py-3 text-center hover:bg-fuchsia-700 hover:drop-shadow-md transition duration-300 ease-in-out">
                                          Register
                                      </button>
-                                 </Link>
+                                 </li>
                              </>
                           )
                         }

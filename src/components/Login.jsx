@@ -64,11 +64,7 @@ const Login = () => {
                             </button>
                         </div>
 
-                        <div className="flex max-[400px]:flex-col max-[400px]:gap-4 justify-between mt-10">
-                            <div>
-                                <input className="cursor-pointer" type="checkbox" id="checked"/>
-                                <label className="cursor-pointer text-[#b9b9b9] hover:text-[#0090D4] transition duration-500" htmlFor="checked"> Remember me</label>
-                            </div>
+                        <div className="flex max-[400px]:flex-col max-[400px]:gap-4 justify-end mt-10">
                             <span onClick={()=>navigate("/forgot-password")} className="cursor-pointer text-[#b9b9b9] hover:text-[#0090D4] transition duration-500">
                                 Forgot password?
                             </span>

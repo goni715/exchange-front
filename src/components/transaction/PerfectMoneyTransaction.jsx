@@ -9,6 +9,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
+import {useGetInformationQuery} from "../../redux/features/information/InformationApi.js";
 
 const PerfectMoneyTransaction = () => {
     const dispatch = useDispatch();
@@ -18,6 +19,10 @@ const PerfectMoneyTransaction = () => {
     const {sendAmount,receiveAmount }= useSelector((state)=>state.rate) || {};
     const [transactionOrBatch, setTransactionOrBatch] = useState("");
     const [exchangeCreate, {isLoading, isSuccess}] = useExchangeCreateMutation();
+    const {data} = useGetInformationQuery();
+    const information = data?.data || {};
+    const {perfectUID} = information || {};
+
 
 
     const handleOk = () => {
@@ -69,8 +74,8 @@ const PerfectMoneyTransaction = () => {
                         Our Perfect money details
                     </div>
                     <div className="flex justify-between border-b border-gray-300 py-2">
-                        <p>Bkash Agent No. (Cash Out) 	01755892955</p>
-                        <p>01755892955</p>
+                        <p>Perfect Money UID EX: U38448381</p>
+                        <p>{perfectUID || "..."}</p>
                     </div>
                     <div className="flex justify-between border-b border-gray-300 py-2">
                         <p>Enter payment amount</p>
@@ -78,7 +83,7 @@ const PerfectMoneyTransaction = () => {
                     </div>
                     <div className="flex justify-between border-b border-gray-300 py-2">
                         <p>Enter payment description</p>
-                        <p>Exchange{sendAmount}</p>
+                        <p>Exchange {sendAmount}</p>
                     </div>
                     <div className="pt-2">
                         <label className="block pb-2" htmlFor="transaction">

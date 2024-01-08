@@ -8,6 +8,7 @@ import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
 import {SetInformationShow} from "../../redux/features/account/accountSlice.js";
+import {useGetInformationQuery} from "../../redux/features/information/InformationApi.js";
 
 const AdvCashTransaction = () => {
     const dispatch = useDispatch();
@@ -17,6 +18,10 @@ const AdvCashTransaction = () => {
     const {sendAmount,receiveAmount }= useSelector((state)=>state.rate) || {};
     const [transactionOrBatch, setTransactionOrBatch] = useState("");
     const [exchangeCreate, {isLoading, isSuccess}] = useExchangeCreateMutation();
+    const {data} = useGetInformationQuery();
+    const information = data?.data || {};
+    const {advCashUID} = information || {};
+
 
 
     const handleOk = () => {
@@ -69,7 +74,7 @@ const AdvCashTransaction = () => {
                     </div>
                     <div className="flex justify-between border-b border-gray-300 bg-[#f9f9f9] py-2">
                         <p>AdvCash U ID</p>
-                        <p>U 0711 9648 5482</p>
+                        <p>{advCashUID || "..."}</p>
                     </div>
                     <div className="flex justify-between border-b border-gray-300 py-2">
                         <p>Enter payment amount</p>

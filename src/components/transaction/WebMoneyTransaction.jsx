@@ -9,6 +9,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
+import {useGetInformationQuery} from "../../redux/features/information/InformationApi.js";
 
 const WebMoneyTransaction = () => {
     const dispatch = useDispatch();
@@ -18,6 +19,10 @@ const WebMoneyTransaction = () => {
     const {sendAmount,receiveAmount }= useSelector((state)=>state.rate) || {};
     const [transactionOrBatch, setTransactionOrBatch] = useState("");
     const [exchangeCreate, {isLoading, isSuccess}] = useExchangeCreateMutation();
+    const {data} = useGetInformationQuery();
+    const information = data?.data || {};
+    const {wmzPurseId} = information || {};
+
 
 
 
@@ -72,7 +77,7 @@ const WebMoneyTransaction = () => {
                     </div>
                     <div className="flex justify-between border-b border-gray-300 bg-[#f9f9f9] py-2">
                         <p>WMZ Purse Id</p>
-                        <p>01755892955</p>
+                        <p>{wmzPurseId || "..."}</p>
                     </div>
                     <div className="flex justify-between border-b border-gray-300 py-2">
                         <p>Enter payment amount</p>

@@ -9,6 +9,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useExchangeCreateMutation} from "../../redux/features/exchange/exchangeApi.js";
+import {useGetInformationQuery} from "../../redux/features/information/InformationApi.js";
 
 const BracBankTransaction = () => {
     const dispatch = useDispatch();
@@ -18,6 +19,10 @@ const BracBankTransaction = () => {
     const {sendAmount,receiveAmount }= useSelector((state)=>state.rate) || {};
     const [transactionOrBatch, setTransactionOrBatch] = useState("");
     const [exchangeCreate, {isLoading, isSuccess}] = useExchangeCreateMutation();
+    const {data} = useGetInformationQuery();
+    const information = data?.data || {};
+    const {bracBankAccountName, bracBankAccountNumber} = information || {};
+
 
 
 
@@ -76,11 +81,11 @@ const BracBankTransaction = () => {
                     </div>
                     <div className="flex justify-between border-b border-gray-300 bg-[#f9f9f9] py-2">
                         <p>Brac Bank Account Name</p>
-                        <p>TECH RECEIVER</p>
+                        <p>{bracBankAccountName || "..."}</p>
                     </div>
                     <div className="flex justify-between border-b border-gray-300 py-2">
                         <p>Brac Bank Account Number</p>
-                        <p>1503627223001</p>
+                        <p>{bracBankAccountNumber || "..."}</p>
                     </div>
                     <div className="flex justify-between border-b border-gray-300 bg-[#f9f9f9] py-2">
                         <p>Enter payment amount</p>
