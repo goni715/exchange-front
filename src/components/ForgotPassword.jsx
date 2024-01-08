@@ -37,7 +37,7 @@ const ForgotPassword = () => {
         <>
             <section id="main" className="bg-[#f7f7f7] py-20">
                 <div className="md:px-12 flex justify-center">
-                    <div className="bg-white px-14 py-12 w-full md:w-2/5">
+                    <div className="bg-white px-14 py-12 w-auto md:w-3/5 lg:w-2/5">
                         <h1 className="text-gray-600 title text-2xl mb-5 text-center">Forgot password?</h1>
                         <hr/>
 

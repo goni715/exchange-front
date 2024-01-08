@@ -46,7 +46,7 @@ const ResetPassword = () => {
         <>
             <section id="main" className="bg-[#f7f7f7] py-20">
                 <div className="md:px-12 flex justify-center">
-                    <div className="bg-white px-14 py-12 w-11/12 md:w-2/5">
+                    <div className="bg-white px-14 py-12 w-auto md:w-3/5 lg:w-2/5">
                         <h1 className="text-gray-500 title text-2xl mb-5 text-center">Change password</h1>
                         <hr/>
 

@@ -6,22 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4e336808-53ad-443c-a063-369c627ffb71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HomeMarquee.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeMarquee.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contact/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact/Contact.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contact/ContactForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact/ContactForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/exchanges/ExchangesItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/exchanges/ExchangesItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/BkashOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/BkashOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/BracBankOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/BracBankOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/CityBankOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/CityBankOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/DutchBanglaOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/DutchBanglaOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/NagadOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/NagadOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/PerfectMoneyOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/PerfectMoneyOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/RocketOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/RocketOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/WebMoneyOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/WebMoneyOrder.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ForgotPassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ForgotPassword.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ResetPassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResetPassword.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +169,8 @@
       <workItem from="1704713261903" duration="116000" />
       <workItem from="1704715955582" duration="1653000" />
       <workItem from="1704717781883" duration="11000" />
-      <workItem from="1704729319363" duration="2519000" />
+      <workItem from="1704729319363" duration="2767000" />
+      <workItem from="1704737291702" duration="222000" />
     </task>
     <servers />
   </component>
