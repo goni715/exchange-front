@@ -36,8 +36,8 @@ const Home = () => {
     useEffect(()=>{
         if(sendAccountId !=="" && receiveAccountId !==""){
             getRate({
-                firstId:sendAccountId,
-                secondId:receiveAccountId
+                sendAccountId,
+                receiveAccountId
             })
         }
     },[sendAccountId, receiveAccountId, getRate])
@@ -93,7 +93,7 @@ const Home = () => {
                                             sendAccounts.map((item,i)=>{
                                                 return(
                                                     <>
-                                                        <option key={i.toString()} value={item._id}>{item.name}</option>
+                                                        <option hidden={item?.hidden} key={i.toString()} value={item._id}>{item.name}</option>
                                                     </>
                                                 )
                                             })
@@ -122,7 +122,7 @@ const Home = () => {
                                             receiveAccounts.map((item,i)=>{
                                                 return(
                                                     <>
-                                                        <option key={i.toString()} value={item._id}>{item.name}</option>
+                                                        <option hidden={item?.hidden} key={i.toString()} value={item._id}>{item.name}</option>
                                                     </>
                                                 )
                                             })

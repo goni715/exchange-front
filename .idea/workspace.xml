@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4e336808-53ad-443c-a063-369c627ffb71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ForgotPassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ForgotPassword.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ResetPassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResetPassword.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ExchangeList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExchangeList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomeMarquee.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeMarquee.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/account/accountSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/account/accountSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/api/apiSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/api/apiSlice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +174,15 @@
       <workItem from="1704717781883" duration="11000" />
       <workItem from="1704729319363" duration="2767000" />
       <workItem from="1704737291702" duration="222000" />
+      <workItem from="1704776093231" duration="1006000" />
+      <workItem from="1704814068007" duration="1370000" />
+      <workItem from="1704822055243" duration="84000" />
+      <workItem from="1704822995551" duration="1027000" />
+      <workItem from="1704824260335" duration="11000" />
+      <workItem from="1704824350712" duration="224000" />
+      <workItem from="1704824649184" duration="94000" />
+      <workItem from="1704824945606" duration="225000" />
+      <workItem from="1704826428026" duration="532000" />
     </task>
     <servers />
   </component>

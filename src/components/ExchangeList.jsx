@@ -59,15 +59,15 @@ const ExchangeList = () => {
     if (!isLoading && !isError && exchanges?.length > 0) {
         for (let i = 0; i < exchanges.length; i++) {
             tableData.push({
-                send: exchanges[i].sendAccount[0].name,
-                receive: exchanges[i].receiveAccount[0].name,
-                amount: exchanges[i].sendAmount,
-                username: exchanges[i].user[0].username,
-                date: moment(exchanges[i].createdAt).format('LLLL'),
+                send: exchanges[i]?.sendAccount[0]?.name,
+                receive: exchanges[i]?.receiveAccount[0]?.name,
+                amount: exchanges[i]?.sendAmount,
+                username: exchanges[i]?.user[0]?.username,
+                date: moment(exchanges[i]?.createdAt).format('LLLL'),
                 status: (
                     <>
                         <button className={`text-white cursor-not-allowed font-bold py-2 bg-green-500 px-4 rounded-md`}>
-                            {exchanges[i].status}
+                            {exchanges[i]?.status}
                         </button>
                     </>
                 ),

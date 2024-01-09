@@ -4,8 +4,8 @@ export const accountSlice=createSlice({
     name:'account',
     initialState:{
         informationShow:false,
-        sendAccountId:"658d2e2a61d015e063fd92dd",
-        receiveAccountId:"658d2f2161d015e063fd92f4",
+        sendAccountId:"659d8664510cf0bdd944d27c",
+        receiveAccountId:"659d8a30510cf0bdd944d2ca",
         sendAccountName:"",
         receiveAccountName:"",
         email: "",

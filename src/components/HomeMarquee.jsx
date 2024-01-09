@@ -13,7 +13,7 @@ const HomeMarquee = () => {
         <>
 
 
-                <section className="py-10 md:py-12">
+                <section className="py-6">
                     <div className="grid grid-cols-1">
                         <div className="marquee-inner-wrapper">
                             <Marquee speed={90}>
