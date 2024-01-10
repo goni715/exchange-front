@@ -32,7 +32,7 @@ const NagadOrder = () => {
     return (
         <>
             <Modal title="" open={modalOpen} onOk={handleOk}>
-                <h1 className="text-2xl mb-3 pt-3 flex items-center gap-2">
+                <h1 className="text-xl sm:text-2xl mb-3 pt-3 flex items-center gap-2">
                     <span>{sendAccountName}</span>
                     <BiTransfer size={20}/>
                     <span>{receiveAccountName}</span>
