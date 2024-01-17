@@ -25,6 +25,8 @@ const ForgotPassword = () => {
            if(email ===""){
                dispatch(SetForgotError("Please enter your email address!"));
            }else{
+            dispatch(SetForgotError(""));
+
                forgotPasswordVerifyEmail({
                    email
                })

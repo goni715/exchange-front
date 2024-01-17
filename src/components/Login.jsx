@@ -32,6 +32,8 @@ const Login = () => {
             dispatch(SetLoginError("Please enter a valid email address!"));
         }
         else{
+            dispatch(SetLoginError(""));
+
             login({
                 email, password
             })

@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e336808-53ad-443c-a063-369c627ffb71" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accounts/AccountInformation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accounts/AccountInformation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accounts/Bkash.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accounts/Bkash.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accounts/BracBank.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accounts/BracBank.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accounts/CityBank.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accounts/CityBank.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accounts/DutchBangla.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accounts/DutchBangla.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accounts/Nagad.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accounts/Nagad.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accounts/PerfectMoney.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accounts/PerfectMoney.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accounts/Rocket.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accounts/Rocket.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accounts/WebMoney.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accounts/WebMoney.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/BkashOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/BkashOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/BracBankOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/BracBankOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/CityBankOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/CityBankOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/DutchBanglaOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/DutchBanglaOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/NagadOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/NagadOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/Order.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/Order.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/PerfectMoneyOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/PerfectMoneyOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/RocketOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/RocketOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/WebMoneyOrder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/WebMoneyOrder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/transaction/Transaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/transaction/Transaction.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="4e336808-53ad-443c-a063-369c627ffb71" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +178,7 @@
       <workItem from="1704826428026" duration="532000" />
       <workItem from="1704832312332" duration="83000" />
       <workItem from="1704881865678" duration="675000" />
-      <workItem from="1704882804256" duration="1301000" />
+      <workItem from="1704882804256" duration="1431000" />
     </task>
     <servers />
   </component>

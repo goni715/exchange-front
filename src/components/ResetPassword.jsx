@@ -32,6 +32,8 @@ const ResetPassword = () => {
             dispatch(SetResetError("Passwords does not match.!"));
         }
         else{
+            dispatch(SetResetError(""));
+
             resetPassword({
                 email,
                 newPassword,

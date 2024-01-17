@@ -36,6 +36,8 @@ const Register = () => {
             dispatch(SetRegisterError("Password & Re-type Password must be same. !"))
         }
         else{
+            dispatch(SetRegisterError(""))
+
             register({
                 username, email, password
             })
