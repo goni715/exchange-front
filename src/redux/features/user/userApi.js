@@ -11,7 +11,7 @@ export const userApi = apiSlice.injectEndpoints({
                 try{
                     const res = await queryFulfilled;
                 }catch(err) {
-                    ErrorToast("Something Went Wrong!");
+                    // ErrorToast("Something Went Wrong!");
                     //do nothing
                     console.log(err);
                 }

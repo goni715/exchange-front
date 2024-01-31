@@ -28,7 +28,7 @@ export const rateApi = apiSlice.injectEndpoints({
                     if(status === 404){
                         ErrorToast(result);
                     }else{
-                        ErrorToast("Something Went Wrong!")
+                        // ErrorToast("Something Went Wrong!")
                     }
                 }
             }

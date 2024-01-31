@@ -13,7 +13,7 @@ export const accountApi = apiSlice.injectEndpoints({
                 try{
                     const res = await queryFulfilled;
                 }catch(err) {
-                    ErrorToast("Something Went Wrong!");
+                    // ErrorToast("Something Went Wrong!");
                     //do nothing
                     console.log(err);
                 }
@@ -26,7 +26,7 @@ export const accountApi = apiSlice.injectEndpoints({
                 try{
                     const res = await queryFulfilled;
                 }catch(err) {
-                    ErrorToast("Something Went Wrong!");
+                    // ErrorToast("Something Went Wrong!");
                     //do nothing
                     console.log(err);
                 }
@@ -44,7 +44,7 @@ export const accountApi = apiSlice.injectEndpoints({
                         dispatch(SetReceiveAccountName(data?.name));
                     }
                 }catch(err) {
-                    ErrorToast("Something Went Wrong!");
+                    // ErrorToast("Something Went Wrong!");
                     //do nothing
                     console.log(err);
                 }
@@ -62,7 +62,7 @@ export const accountApi = apiSlice.injectEndpoints({
                         dispatch(SetSendAccountName(data?.name));
                     }
                 }catch(err) {
-                    ErrorToast("Something Went Wrong!");
+                    // ErrorToast("Something Went Wrong!");
                     //do nothing
                     console.log(err);
                 }
