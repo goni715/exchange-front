@@ -33,3 +33,7 @@ button:disabled{
     font-size: 24px !important;
     font-weight: bold !important;
 }
+
+.ant-pagination{
+    display: none !important;
+}
