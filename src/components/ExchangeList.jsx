@@ -1,6 +1,7 @@
 import {Table} from "antd";
 import {useGetRecentCompletedExchangesQuery} from "../redux/features/exchange/exchangeApi.js";
 import moment from "moment/moment";
+import ListLoading from "./Loader/ListLoading.jsx";
 
 
 const columns = [
@@ -81,12 +82,21 @@ const ExchangeList = () => {
 
     return (
         <>
-            {content}
             <section id="main" className="py-10">
                 <h1 className="text-center font-bold text-3xl mb-5">Recent Exchanges</h1>
-                <div className="px-12 bg-white w-auto overflow-x-auto">
-                    <Table columns={columns} dataSource={tableData} />
-                </div>
+                {
+                    isLoading? (
+                        <>
+                            <div className="px-8">
+                                <ListLoading/>
+                            </div>
+                        </>
+                    ) : (
+                        <div className="px-12 bg-white w-auto overflow-x-auto">
+                            <Table columns={columns} dataSource={tableData}/>
+                        </div>
+                    )
+                }
             </section>
         </>
     );
