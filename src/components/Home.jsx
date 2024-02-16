@@ -156,7 +156,7 @@ const Home = () => {
                                 </div>
                             </div>
 
-                            <div className="container md:px-12 flex justify-center gap-8 mt-6">
+                            <div className="md:px-12 flex justify-center gap-8 mt-6">
                                 <button onClick={handleSubmit}
                                         className="bg-[#0090D4] text-white rounded-md px-12 py-3">Exchange
                                 </button>
