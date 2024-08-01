@@ -25,7 +25,8 @@ const Bkash = () => {
     return (
         <>
 
-            <section className="bg-[#f7f7f7] py-10">
+            <section className="bg-[#f7f7f7] min-h-[80vh] py-10 flex items-center">
+                <div className="flex-1">
                 <div className="md:px-12 flex justify-center">
                     <div className="w-3/4 sm:w-1/2">
                         <h1 className="text-3xl mb-3 ">Additional Information</h1>
@@ -55,6 +56,7 @@ const Bkash = () => {
                 </div>
                 <div className="md:px-12 flex justify-center gap-8 mt-6">
                     <button onClick={handleSubmit} className="bg-[#0090D4] text-white rounded-md px-12 py-3">Process Exchange</button>
+                </div>
                 </div>
             </section>
 

@@ -7,7 +7,7 @@ const MyExchanges = () => {
 
     return (
         <>
-            <section id="main" className="bg-[#f7f7f7] py-10 md:py-20">
+            <section id="main" className="bg-[#f7f7f7] min-h-[80vh] py-10 md:py-20">
                 <div className="md:px-20">
                     <div className="bg-white px-6">
                         <h1 className="title text-2xl text-gray-400 font-bold pt-6 pb-4">My Exchanges</h1>
