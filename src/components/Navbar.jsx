@@ -1,5 +1,4 @@
 import {IoMdClose, IoMdMenu} from "react-icons/io";
-import logo from '../assets/images/logo.svg';
 import {useNavigate} from "react-router-dom";
 import {getToken, getUserDetails, logout} from "../helper/SessionHelper.js";
 import {useState} from "react";
@@ -25,10 +24,10 @@ const Navbar = () => {
                                 navigate('/')
                                 navigate(0);
                             }}
-                            className="flex items-center"
+                            className="flex items-center cursor-pointer"
                         >
-                            <img src={logo} alt="logo" className="h-10 mr-3"/>
-                            <span className="text-2xl text-white font-bold">Exchange</span>
+                            {/* <img src={logo} alt="logo" className="h-10 mr-3"/> */}
+                            <span className="text-2xl text-white font-bold italic">Exchange</span>
                         </div>
                         <span className="block cursor-pointer text-3xl text-black bg-gray-100 p-2 rounded-lg md:hidden">
                              {open ? (
